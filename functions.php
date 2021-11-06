@@ -93,3 +93,11 @@ function unfold_customizer_color(){
     <?php
 }
 add_action('wp_head','unfold_customizer_color');
+
+/**
+ * Customizer JS
+ */
+function unfold_customizer_live_preview(){
+    wp_enqueue_script('customizer', get_theme_file_uri() . '/assets/js/customizer.js', array('jquery', 'customize-preview'), '', true);
+}
+add_action('customize_preview_init','unfold_customizer_live_preview');

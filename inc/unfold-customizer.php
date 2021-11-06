@@ -12,7 +12,7 @@ function unfold_cusomize_register($wp_customize){
 
     $wp_customize->add_setting( 'hero_sub_title', array(
         'default'   =>  'HELLO, I’M',
-        'transport' =>  'refresh' //PostMessage
+        'transport' =>  'postMessage' //PostMessage
     ));
 
     $wp_customize->add_control( 'hero_subtitle_ctrl', array(
@@ -24,7 +24,7 @@ function unfold_cusomize_register($wp_customize){
 
     $wp_customize -> add_setting( 'hero_sub_title_color', array(
         'default'   =>  '#754ef9',
-        'transport' =>  'refresh' // PostMessage
+        'transport' =>  'postMessage' // PostMessage
     ));
 
     $wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'hero_sub_title_color_ctrl', array(
