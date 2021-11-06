@@ -111,3 +111,30 @@ add_action('customize_preview_init','unfold_customizer_live_preview');
  * TGM
  */
 require_once( get_theme_file_path('inc/tgm.php') );
+
+/**
+ * Nav menu li custom class
+ */
+if(!function_exists('unfold_nav_class')){
+    function unfold_nav_class( $classes, $item, $args){
+        if( 'primary_menu' === $args->theme_location){
+            $classes[] = "nav-item";
+        }
+
+        return $classes;
+    }
+    add_action('nav_menu_css_class','unfold_nav_class',10,3);
+}
+
+/**
+ * Nav menu active class
+ */
+if(!function_exists('unfold_menu_active_class')){
+    function unfold_menu_active_class( $classes, $item){
+        if( in_array('current-menu-item', $classes)){
+            $classes[]  = 'active';
+        }
+        return $classes;
+    }
+    add_action('nav_menu_css_class','unfold_menu_active_class', 10, 2);
+}
