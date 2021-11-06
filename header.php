@@ -106,10 +106,10 @@
                     <div class="row align-items-center">
                         <div class="col-xl-5 col-lg-6">
                             <div class="header-content-right">
-                                <h4 class="sub-title">Hello, I’m</h4>
-                                <h1 class="title">Mark Parker</h1>
-                                <p>A Freelance UI Designer & Web Developer</p>
-                                <a class="main-btn" href="#work">View my Work</a>
+                                <h4 class="sub-title"><?php echo get_theme_mod('hero_sub_title'); ?></h4>
+                                <h1 class="title"><?php echo get_theme_mod('hero_title'); ?></h1>
+                                <p><?php echo get_theme_mod('hero_description'); ?></p>
+                                <a class="main-btn" href="<?php echo get_theme_mod('hero_button_url'); ?>"><?php echo get_theme_mod('hero_button_text'); ?></a>
                             </div> <!-- header content right -->
                         </div>
                         <div class="col-lg-6 offset-xl-1">
