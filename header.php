@@ -114,7 +114,7 @@
                         </div>
                         <div class="col-lg-6 offset-xl-1">
                             <div class="header-image d-none d-lg-block">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/hero.png" alt="hero">
+                                <img src="<?php echo get_theme_mod('hero_img'); ?>" alt="hero">
                             </div> <!-- header image -->
                         </div>
                     </div> <!-- row -->

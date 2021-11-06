@@ -69,5 +69,16 @@ function unfold_cusomize_register($wp_customize){
         'section'   =>  'hero_section',
         'type'      =>  'url'
     ));
+
+    $wp_customize->add_setting( 'hero_img', array(
+        'default'   =>  get_theme_file_uri('assets/images/banner/hero.png'),
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Image_control( $wp_customize, 'hero_img_ctrl', array(
+        'label'     =>  __('Image','unfold'),
+        'settings'  =>  'hero_img',
+        'section'   =>  'hero_section',
+    )));
 }
 add_action('customize_register', 'unfold_cusomize_register');
