@@ -9,6 +9,18 @@ function unfold_theme_setup(){
         )
     );
 
+    /**
+     * Custom logo
+     */
+    $defaults = array(
+        'width'     =>  '150',
+        'height'    =>  '50',
+        'flex-width'=>  true,
+        'flex-height'=> true,
+        'header-text'=> array( 'site-title', 'site-description')
+    );
+    add_theme_support('custom-logo');
+
     /*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *

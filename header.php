@@ -43,8 +43,22 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo">
+                            <?php
+                                $custom_logo_id = get_theme_mod('custom_logo');
+                                $logo = wp_get_attachment_image_src( $custom_logo_id, 'full');
+                            ?>
+                            <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
+                                <?php
+                                    if( has_custom_logo() ){
+                                ?>
+                                <img src="<?php echo esc_url( $logo[0] ) ?>" alt="<?php echo get_bloginfo('name');  ?>">
+                                <?php
+                                    }else{
+                                ?>
+                                    <span><?php echo get_bloginfo('name'); ?></span>
+                                <?php
+                                    }
+                                ?>
                             </a> <!-- Logo -->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
