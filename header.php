@@ -53,14 +53,22 @@
                             </button>
 
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active"><a class="page-scroll" href="#home">Home</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#about">About</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#service">Services</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#work">Portfolio</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#blog">Blog</a></li>
-                                    <li class="nav-item"><a class="page-scroll" href="#contact">Contact</a></li>
-                                </ul>
+                                <?php
+                                    wp_nav_menu(array(
+                                        'menu'      =>  '',
+                                        'container' =>  '',
+                                        'container_class'   =>  '',
+                                        'container_id'      =>  '',
+                                        'menu_class'        =>  'navbar-nav ml-auto',
+                                        'menu_id'           =>  '',
+                                        'fallback_cb'       =>  '',
+                                        'before'            =>  '',
+                                        'after'            =>  '',
+                                        'depth'            =>   3,
+                                        'walker'           =>   '',
+                                        'theme_location'    =>  'primary_menu'
+                                    ));
+                                ?>
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
                     </div>

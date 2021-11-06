@@ -39,6 +39,11 @@ function unfold_theme_setup(){
 
     // editor style
     add_editor_style('assets/css/editor-style.css');
+
+    // register menu
+    register_nav_menus(array(
+        'primary_menu'  =>  __('Primary Menu','unfold'),
+    ));    
 }
 add_action('after_setup_theme','unfold_theme_setup');
 
