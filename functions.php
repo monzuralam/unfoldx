@@ -74,3 +74,8 @@ function unfold_register_script(){
     wp_enqueue_script( 'main', get_theme_file_uri() . '/assets/js/main.js', array('jquery'), '1.0.0', true );
 }
 add_action('wp_enqueue_scripts','unfold_register_script');
+
+/**
+ * Unfold Customizer
+ */
+include_once ( get_theme_file_path('inc/unfold-customizer.php') );
