@@ -22,6 +22,17 @@ function unfold_cusomize_register($wp_customize){
         'type'      =>  'text'
     ));
 
+    $wp_customize -> add_setting( 'hero_sub_title_color', array(
+        'default'   =>  '#754ef9',
+        'transport' =>  'refresh' // PostMessage
+    ));
+
+    $wp_customize -> add_control( new WP_Customize_Color_Control( $wp_customize, 'hero_sub_title_color_ctrl', array(
+        'label' =>  __('Sub Title color','unfold'),
+        'settings'  =>  'hero_sub_title_color',
+        'section'   =>  'hero_section'
+    )));
+
     $wp_customize->add_setting( 'hero_title', array(
         'default'   =>  'MARK PARKER',
         'transport' =>  'refresh' //PostMessage
