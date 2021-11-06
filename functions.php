@@ -101,3 +101,8 @@ function unfold_customizer_live_preview(){
     wp_enqueue_script('customizer', get_theme_file_uri() . '/assets/js/customizer.js', array('jquery', 'customize-preview'), '', true);
 }
 add_action('customize_preview_init','unfold_customizer_live_preview');
+
+/**
+ * TGM
+ */
+require_once( get_theme_file_path('inc/tgm.php') );
