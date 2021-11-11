@@ -151,10 +151,35 @@
                             <div class="col-lg-12">
                                 <div class="header-social-icon">
                                     <ul>
-                                        <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                                        <li><a href="#"><i class="lni-twitter-original"></i></a></li>
-                                        <li><a href="#"><i class="lni-behance-original"></i></a></li>
-                                        <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                                        <?php
+                                            $fb = get_theme_mod('facebook_link');
+                                            if($fb){        
+                                        ?>
+                                        <li><a href="<?php echo esc_url($fb); ?>"><i class="lni-facebook-filled"></i></a></li>
+                                        <?php 
+                                            }
+                                            
+                                            $tw = get_theme_mod('twitter_link');
+                                            if($tw){
+                                        ?>
+                                        <li><a href="<?php echo esc_url($tw); ?>"><i class="lni-twitter-original"></i></a></li>
+                                        <?php 
+                                            }
+
+                                            $be = get_theme_mod('behance_link');
+                                            if($be){
+                                        ?>
+                                        <li><a href="<?php echo esc_url($be); ?>"><i class="lni-behance-original"></i></a></li>
+                                        <?php
+                                            }
+
+                                            $li = get_theme_mod('linkedin_link');
+                                            if($li){
+                                        ?>
+                                        <li><a href="<?php echo esc_url($li); ?>"><i class="lni-linkedin-original"></i></a></li>
+                                        <?php
+                                            }
+                                        ?>
                                     </ul>
                                 </div> <!-- header social -->
                             </div>

@@ -108,5 +108,57 @@ function unfold_cusomize_register($wp_customize){
     function unfold_social_icon_sanitize_checkbox( $checked ){
         return ( (isset( $checked ) && true == $checked ) ? true : false );
     }
+
+    // facebook 
+    $wp_customize->add_setting( 'facebook_link', array(
+        'default'   =>  'https://facebook.com/#',
+        'transport' =>  'refresh' // postMessage
+    ));
+
+    $wp_customize->add_control( 'facebook_link_ctrl', array(
+        'label'     =>  __('Facebook','unfold'),
+        'settings'  =>  'facebook_link',
+        'section'   =>  'hero_section',
+        'type'      =>  'url'
+    ));
+
+    // twitter
+    $wp_customize->add_setting( 'twitter_link', array(
+        'default'   =>  'https://twiiter.com/#',
+        'transport' =>  'refresh' // postMessage
+    ));
+
+    $wp_customize->add_control( 'twitter_link_ctrl', array(
+        'label'     =>  __('Twitter','unfold'),
+        'settings'  =>  'twitter_link',
+        'section'   =>  'hero_section',
+        'type'      =>  'url'
+    ));
+
+    // behance
+    $wp_customize->add_setting( 'behance_link', array(
+        'default'   =>  'https://behance.com/#',
+        'transport' =>  'refresh' // postMessage
+    ));
+
+    $wp_customize->add_control( 'behance_link_ctrl', array(
+        'label'     =>  __('Behance','unfold'),
+        'settings'  =>  'behance_link',
+        'section'   =>  'hero_section',
+        'type'      =>  'url'
+    ));
+
+    // linkedin
+    $wp_customize->add_setting( 'linkedin_link', array(
+        'default'   =>  'https://linkedin.com/#',
+        'transport' =>  'refresh' // postMessage
+    ));
+
+    $wp_customize->add_control( 'linkedin_link_ctrl', array(
+        'label'     =>  __('Linkedin','unfold'),
+        'settings'  =>  'linkedin_link',
+        'section'   =>  'hero_section',
+        'type'      =>  'url'
+    ));
 }
 add_action('customize_register', 'unfold_cusomize_register');
