@@ -91,5 +91,22 @@ function unfold_cusomize_register($wp_customize){
         'settings'  =>  'hero_img',
         'section'   =>  'hero_section',
     )));
+
+    $wp_customize->add_setting( 'social_icon', array(
+        'default'   =>  'true',
+        'transport' =>  'refresh', // postMessage
+        'sanitize_callback' =>  'unfold_social_icon_sanitize_checkbox'
+    ));
+
+    $wp_customize->add_control( 'social_icon_ctrl', array(
+        'label'     =>  __('Social icon enable ?','unfold'),
+        'settings'  =>  'social_icon',
+        'section'   =>  'hero_section',
+        'type'      =>  'checkbox'
+    ));
+
+    function unfold_social_icon_sanitize_checkbox( $checked ){
+        return ( (isset( $checked ) && true == $checked ) ? true : false );
+    }
 }
 add_action('customize_register', 'unfold_cusomize_register');

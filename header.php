@@ -141,6 +141,10 @@
                         </div>
                     </div> <!-- row -->
                 </div> <!-- container -->
+                <?php
+                    $social_enable = get_theme_mod('social_icon');
+                    if( $social_enable ){
+                ?>
                 <div class="header-social">
                     <div class="container">
                         <div class="row">
@@ -157,6 +161,9 @@
                         </div> <!-- row -->
                     </div> <!-- container -->
                 </div> <!-- header social -->
+                <?php
+                    }
+                ?>
             </div> <!-- header content -->
         <?php
         endif;
