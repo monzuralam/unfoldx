@@ -195,7 +195,7 @@ Kirki::add_field( 'unfold_config', array(
 
 // About Section Title
 Kirki::add_field( 'unfold_config', [
-    'label'     =>  __( 'About Section Title', 'unfold' ),
+    'label'     =>  __( 'Section Title', 'unfold' ),
     'settings'  =>  'about_section_title',
     'section'   =>  'about_section',
     'type'      =>  'text',
@@ -204,7 +204,7 @@ Kirki::add_field( 'unfold_config', [
 
 // About Section Description
 Kirki::add_field( 'unfold_config', [
-    'label'     =>  __( 'About Section Description', 'unfold'),
+    'label'     =>  __( 'Section Description', 'unfold'),
     'settings'  =>  'about_section_desc',
     'section'   =>  'about_section',
     'type'      =>  'textarea',
