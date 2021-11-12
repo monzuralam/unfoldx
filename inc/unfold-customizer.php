@@ -162,3 +162,51 @@ function unfold_cusomize_register($wp_customize){
     ));
 }
 add_action('customize_register', 'unfold_cusomize_register');
+
+// Kirki
+Kirki::add_config( 'unfold_config', array(
+    'capability'    =>  'edit_theme_options',
+    'option_type'   =>  'theme_mod'
+));
+
+Kirki::add_panel( 'unfold_panel', array(
+    'title'         =>  __( 'Unfold Options', 'unfold' ),
+    'description'   =>  __( 'Unfold Description', 'unfold'), 
+    'priority'      =>  20
+));
+
+Kirki::add_section( 'about_section', array(
+    'title'         =>  __( 'About Section', 'unfold' ),
+    'panel'         =>  'unfold_panel'
+));
+
+// Enable About Section
+Kirki::add_field( 'unfold_config', array(
+    'label'     =>  __('Enable About Section ?'),
+    'settings'  =>  'about_section_enable',
+    'section'   =>  'about_section',
+    'type'      =>  'switch',
+    'default'   =>  'on',
+    'choices'   =>  [
+        'on'    =>  esc_html__('Yes', 'unfold'),
+        'off'   =>  esc_html__('No', 'unfold')
+    ]
+));
+
+// About Section Title
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __( 'About Section Title', 'unfold' ),
+    'settings'  =>  'about_section_title',
+    'section'   =>  'about_section',
+    'type'      =>  'text',
+    'default'   =>  'About Me',
+]);
+
+// About Section Description
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __( 'About Section Description', 'unfold'),
+    'settings'  =>  'about_section_desc',
+    'section'   =>  'about_section',
+    'type'      =>  'textarea',
+    'default'   =>  'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.'
+]);

@@ -2,14 +2,16 @@
 get_header();
 ?>
 <!--====== ABOUT PART START ======-->
-
+<?php
+    if( true == get_theme_mod( 'about_section_enable' ) ){
+?>
 <section id="about" class="about-area pt-125 pb-130">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center">
-                    <h2 class="title">About Me</h2>
-                    <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>
+                    <h2 class="title"><?php echo get_theme_mod('about_section_title'); ?></h2>
+                    <p><?php echo get_theme_mod('about_section_desc'); ?></p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
@@ -133,7 +135,9 @@ get_header();
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-
+<?php
+    }
+?>
 <!--====== ABOUT PART ENDS ======-->
 
 <!--====== SERVICES PART START ======-->
