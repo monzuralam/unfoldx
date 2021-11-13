@@ -516,7 +516,7 @@ Kirki::add_field( 'unfold_config', [
 ]);
 
 // CTA button link 1 
-Kirki::add_field( 'unfold', [
+Kirki::add_field( 'unfold_config', [
     'label'         =>  esc_html__('CTA Button 1 Link', 'unfold'),
     'settings'      =>  'cta_btn_1_link',
     'section'       =>  'cta_section',
@@ -534,10 +534,29 @@ Kirki::add_field( 'unfold_config', [
 ]);
 
 // CTA button link 2
-Kirki::add_field( 'unfold', [
+Kirki::add_field( 'unfold_config', [
     'label'         =>  esc_html__('CTA Button 2 Link', 'unfold'),
     'settings'      =>  'cta_btn_2_link',
     'section'       =>  'cta_section',
     'type'          =>  'url',
     'default'       =>  '#'
+]);
+
+// Work Section
+Kirki::add_section( 'work_section', [
+    'title'         =>  esc_html__('Work Section', 'unfold'),
+    'panel'         =>  'unfold_panel'
+]);
+
+// Enable work section
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Enable Work ?', 'unfold'),
+    'settings'      =>  'work_section_enable',
+    'section'       =>  'work_section',
+    'type'          =>  'switch',
+    'default'       =>  'on',
+    'choices'       =>  [
+        'on'        =>  esc_html__('On','unfold'),
+        'off'       =>  esc_html__('Off','unfold')
+    ]
 ]);

@@ -151,7 +151,9 @@ get_header();
 <!--====== CALL TO ACTION PART ENDS ======-->
 
 <!--====== WORK PART START ======-->
-
+<?php
+    if( true == get_theme_mod('work_section_enable') ){
+?>
 <section id="work" class="work-area pt-125 pb-130">
     <div class="container">
         <div class="row">
@@ -269,7 +271,9 @@ get_header();
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-
+<?php
+    }
+?>
 <!--====== WORK PART ENDS ======-->
 
 <!--====== PRICING PART START ======-->
