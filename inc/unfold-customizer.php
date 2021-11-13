@@ -355,3 +355,22 @@ Kirki::add_field( 'unfold_config', [
         'off'   =>  esc_html__( 'Off', 'unfold' ),
     ]
 ]);
+
+// Services Section title
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__( 'Section Title', 'unfold'),
+    'settings'      =>  'service_section_title',
+    'section'       =>  'service_section',
+    'type'          =>  'text',
+    'placeholder'   =>  esc_html__( 'Services', 'unfold'),
+    'default'       =>  'My Services',
+]);
+
+// Services section description 
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__( 'Section Description', 'unfold'),
+    'settings'      =>  'service_section_desc',
+    'section'       =>  'service_section',
+    'type'          =>  'textarea',
+    'default'       =>  'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.',
+]);

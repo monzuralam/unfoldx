@@ -85,8 +85,8 @@ get_header();
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center pb-30">
-                    <h2 class="title">My Services</h2>
-                    <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>
+                    <h2 class="title"><?php echo get_theme_mod('service_section_title'); ?></h2>
+                    <p><?php echo get_theme_mod('service_section_desc'); ?></p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
