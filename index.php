@@ -77,7 +77,9 @@ get_header();
 <!--====== ABOUT PART ENDS ======-->
 
 <!--====== SERVICES PART START ======-->
-
+<?php 
+    if( true == get_theme_mod('service_section_enable') ){
+?>
 <section id="service" class="services-area gray-bg pt-125 pb-130">
     <div class="container">
         <div class="row justify-content-center">
@@ -158,7 +160,9 @@ get_header();
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-
+<?php
+    }
+?>
 <!--====== SERVICES PART ENDS ======-->
 
 <!--====== CALL TO ACTION PART START ======-->

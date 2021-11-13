@@ -336,3 +336,22 @@ Kirki::add_field( 'unfold_config', [
         ]
     ]
 ]);
+
+// Service Section
+Kirki::add_section( 'service_section', array(
+    'title'     =>  __( 'Services Section', 'unfold'),
+    'panel'     =>  'unfold_panel',
+));
+
+// Enable Services section
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__( 'Enable Services Section', 'unfold' ),
+    'settings'      =>  'service_section_enable',
+    'section'       =>  'service_section',
+    'type'          =>  'switch',
+    'default'       =>  'on',
+    'choices'       =>  [
+        'on'    =>  esc_html__( 'On', 'unfold' ),
+        'off'   =>  esc_html__( 'Off', 'unfold' ),
+    ]
+]);
