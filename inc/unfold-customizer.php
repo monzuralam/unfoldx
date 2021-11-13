@@ -578,3 +578,34 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'textarea',
     'default'       =>  'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.'
 ]);
+
+// Work Section item
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Work Item', 'unfold'),
+    'settings'      =>  'work_section_items',
+    'section'       =>  'work_section',
+    'type'          =>  'repeater',
+    'default'       =>  '',
+    'row_label'     =>  [
+        'type'      =>  'field',
+        'value'     =>  esc_html__('Item', 'unfold'),
+        'field'     =>  'work_title'
+    ],
+    'fields'        =>  [
+        'work_title'    =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Title', 'unfold'),
+        ],
+
+        'work_img'      =>  [
+            'type'      =>  'image',
+            'label'     =>  esc_html__('Photo', 'unfold')
+        ],
+
+        'work_link'     =>  [
+            'type'      =>  'url',
+            'label'     =>  esc_html__('URL', 'unfold'),
+            'default'   =>  '#'
+        ]
+    ]
+]);
