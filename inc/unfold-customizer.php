@@ -374,3 +374,88 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'textarea',
     'default'       =>  'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.',
 ]);
+
+// Services item
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__( 'Service item', 'unfold'),
+    'settings'      =>  'service_section_item',
+    'section'       =>  'service_section',
+    'type'          =>  'repeater',
+    'default'       =>  [],
+    'row_label'     =>  [
+        'type'      =>  'field',
+        'value'     =>  esc_html__( 'service', 'unfold'),
+        'field'     =>  'service_item_title'
+    ],
+    'fields'        =>  [
+        'service_item_icon'     =>  [
+            'type'      =>  'select',
+            'label'     =>  esc_html__( 'Icon', 'unfold'),
+            'default'   =>  '',
+            'multiple'  =>  false,
+            'choices'   =>  [
+                ''                  =>  esc_html__('Select Icon', 'unfold'),
+                'lni-code-alt'      =>  esc_html__('Code alt', 'unfold'),
+                'lni-color-pallet'  =>  esc_html__('Color pallet', 'unfold'),
+                'lni-mobile'        =>  esc_html__('Mobile', 'unfold'),
+                'lni-vector'        =>  esc_html__('Vector', 'unfold'),
+                'lni-website'       =>  esc_html__('Website', 'unfold'),
+                'lni-support'       =>  esc_html__('Support', 'unfold'),
+                'lni-ruler'         =>  esc_html__('Ruler', 'unfold'),
+                'lni-ruler-pencil'  =>  esc_html__('Ruler pencil', 'unfold'),
+                'lni-brush'         =>  esc_html__('Brush', 'unfold'),
+                'lni-paint-bucket'  =>  esc_html__('Paint bucket', 'unfold'),
+                'lni-bulb'          =>  esc_html__('Bulb', 'unfold'),
+                'lni-highlight-alt' =>  esc_html__('Highlight alt', 'unfold'),
+                'lni-highlight'     =>  esc_html__('Hightlight', 'unfold'),
+                'lni-handshake'     =>  esc_html__('Handshake', 'unfold'),
+                'lni-briefcase'     =>  esc_html__('Briefcase', 'unfold'),
+                'lni-funnel'        =>  esc_html__('funnel', 'unfold'),
+                'lni-world'         =>  esc_html__('World', 'unfold'),
+                'lni-calculator'    =>  esc_html__('Calculator', 'unfold'),
+                'lni-target-revenue'=>  esc_html__('Target revenue', 'unfold'),
+                'lni-revenue'       =>  esc_html__('Revenue', 'unfold'),
+                'lni-invention'     =>  esc_html__('Invention', 'unfold'),
+                'lni-network'       =>  esc_html__('Network', 'unfold'),
+                'lni-credit-cards'  =>  esc_html__('Credit cards', 'unfold'),
+                'lni-pie-chart'     =>  esc_html__('Pie chart', 'unfold'),
+                'lni-archive'       =>  esc_html__('Archive', 'unfold'),
+                'lni-magnifier'     =>  esc_html__('Magnifier', 'unfold'),
+                'lni-agenda'        =>  esc_html__('Agenda', 'unfold'),
+                'lni-tag'           =>  esc_html__('tag', 'unfold'),
+                'lni-target'        =>  esc_html__('Target', 'unfold'),
+                'lni-stamp'         =>  esc_html__('Stamp', 'unfold'),
+                'lni-clipboard'     =>  esc_html__('Clipboard', 'unfold'),
+                'lni-licencse'      =>  esc_html__('Licencse', 'unfold'),
+                'lni-paperclip'     =>  esc_html__('Paperclip', 'unfold'),
+                'lni-stats-up'      =>  esc_html__('Stats up', 'unfold'),
+                'lni-stats-down'    =>  esc_html__('Stats down', 'unfold'),
+                'lni-bar-chart'     =>  esc_html__('Bar chart', 'unfold'),
+                'lni-bullhorn'      =>  esc_html__('Bullhorn', 'unfold'),
+                'lni-calendar'      =>  esc_html__('Calendar', 'unfold'),
+                'lni-quotation'     =>  esc_html__('Quotation', 'unfold'),
+                'lni-bus'           =>  esc_html__('Bus', 'unfold'),
+                'lni-car-alt'       =>  esc_html__('Car alt', 'unfold'),
+                'lni-car'          =>   esc_html__('Car', 'unfold'),
+            ]    
+        ],
+
+        'service_item_title'    =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Service title', 'unfold'),
+            'default'   =>  '',
+        ],
+
+        'service_item_desc'     =>  [
+            'type'      =>  'textarea',
+            'label'     =>  esc_html__('Service Description', 'unfold'),
+            'default'   =>  ''
+        ],
+
+        'service_item_link'     =>  [
+            'type'      =>  'url',
+            'label'     =>  esc_html__('Link', 'unfold'),
+            'default'   =>  '#'
+        ]
+    ]
+]);
