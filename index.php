@@ -118,7 +118,9 @@ get_header();
 <!--====== SERVICES PART ENDS ======-->
 
 <!--====== CALL TO ACTION PART START ======-->
-
+<?php
+    if( true == get_theme_mod('cta_section_enable') ){
+?>
 <section id="call-to-action" class="call-to-action pt-125 pb-130 bg_cover" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/call-to-action.jpg)">
     <div class="container">
         <div class="row justify-content-center">
@@ -135,7 +137,9 @@ get_header();
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-
+<?php
+    }
+?>
 <!--====== CALL TO ACTION PART ENDS ======-->
 
 <!--====== WORK PART START ======-->

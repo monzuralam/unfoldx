@@ -459,3 +459,22 @@ Kirki::add_field( 'unfold_config', [
         ]
     ]
 ]);
+
+// Call to action
+Kirki::add_section( 'cta_section', [
+    'title'         =>  esc_html__('CTA Section'),
+    'panel'         =>  'unfold_panel'
+]);
+
+// Enable cta section
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Enable CTA?', 'unfold'),
+    'settings'      =>  'cta_section_enable',
+    'section'       =>  'cta_section',
+    'type'          =>  'switch',
+    'default'       =>  'on',
+    'choices'       =>  [
+        'on'        =>  esc_html__('On','unfold'),
+        'off'       =>  esc_html__('Off','unfold')
+    ]
+]);
