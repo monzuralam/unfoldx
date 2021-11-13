@@ -478,3 +478,12 @@ Kirki::add_field( 'unfold_config', [
         'off'       =>  esc_html__('Off','unfold')
     ]
 ]);
+
+// CTA Background image
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('CTA Background','unfold'),
+    'settings'      =>  'cta_section_bg',
+    'section'       =>  'cta_section',
+    'type'          =>  'background',
+    'default'       =>  ''
+]);
