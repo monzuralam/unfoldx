@@ -310,3 +310,29 @@ Kirki::add_field( 'unfold_config', [
         ]
     ]
 ]);
+
+// About me skill
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  esc_html__('Skills ', 'unfold'),
+    'settings'  =>  'about_me_skill',
+    'section'   =>  'about_section',
+    'type'      =>  'repeater',
+    'default'   =>  [],
+    'row_label' =>   [
+        'type'      =>  'field',
+        'value'     =>  esc_html__( 'Skill', 'unfold'),
+        'field'     =>  'skill_title'
+    ],
+    'fields'     =>  [
+        'skill_title'   =>  [
+            'type'          =>  'text',
+            'label'         =>  esc_html__( 'Title', 'unfold'),
+            'placeholder'   =>  esc_html__( 'HTML', 'unfold')
+        ],
+        'skill_percentage'  =>  [
+            'type'          =>  'number',
+            'label'         =>  esc_html__( 'Percentage', 'unfold'),
+            'placeholder'   =>  esc_html__( '80', 'unfold')
+        ]
+    ]
+]);

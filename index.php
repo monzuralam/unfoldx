@@ -43,70 +43,29 @@ get_header();
             </div>
             <div class="col-xl-5 offset-xl-1 col-lg-6">
                 <div class="about-skills pt-25">
+                    <?php 
+                        $skills = get_theme_mod( 'about_me_skill' );
+                        foreach( $skills as $skill ){
+                    ?>
                     <div class="skill-item mt-25">
                         <div class="skill-header">
-                            <h6 class="skill-title">HTML</h6>
+                            <h6 class="skill-title"><?php echo $skill['skill_title']; ?></h6>
                             <div class="skill-percentage">
                                 <div class="count-box counted">
-                                    <span class="counter">80</span>
+                                    <span class="counter"><?php echo $skill['skill_percentage']; ?></span>
                                 </div>
                                 %
                             </div>
                         </div>
                         <div class="skill-bar">
                             <div class="bar-inner">
-                                <div class="bar progress-line" data-width="80"></div>
+                                <div class="bar progress-line" data-width="<?php echo $skill['skill_percentage']; ?>"></div>
                             </div>
                         </div>
                     </div> <!-- skill item -->
-                    <div class="skill-item mt-25">
-                        <div class="skill-header">
-                            <h6 class="skill-title">CSS</h6>
-                            <div class="skill-percentage">
-                                <div class="count-box counted">
-                                    <span class="counter">60</span>
-                                </div>
-                                %
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="bar-inner">
-                                <div class="bar progress-line" data-width="60"></div>
-                            </div>
-                        </div>
-                    </div> <!-- skill item -->
-                    <div class="skill-item mt-25">
-                        <div class="skill-header">
-                            <h6 class="skill-title">Photoshop</h6>
-                            <div class="skill-percentage">
-                                <div class="count-box counted">
-                                    <span class="counter">50</span>
-                                </div>
-                                %
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="bar-inner">
-                                <div class="bar progress-line" data-width="50"></div>
-                            </div>
-                        </div>
-                    </div> <!-- skill item -->
-                    <div class="skill-item mt-25">
-                        <div class="skill-header">
-                            <h6 class="skill-title">Sketch</h6>
-                            <div class="skill-percentage">
-                                <div class="count-box counted">
-                                    <span class="counter">90</span>
-                                </div>
-                                %
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="bar-inner">
-                                <div class="bar progress-line" data-width="90"></div>
-                            </div>
-                        </div>
-                    </div> <!-- skill item -->
+                    <?php
+                        }
+                    ?>
                 </div> <!-- about skills -->
             </div>
         </div> <!-- row -->
