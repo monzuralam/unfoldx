@@ -121,16 +121,24 @@ get_header();
 <?php
     if( true == get_theme_mod('cta_section_enable') ){
 ?>
-<section id="call-to-action" class="call-to-action pt-125 pb-130 bg_cover" style="background-image: url(<?php echo get_theme_mod('cta_section_bg')['background-image']; ?>);">
+<section id="call-to-action" class="call-to-action pt-125 pb-130 bg_cover" style="background-image: url(<?php echo esc_attr( get_theme_mod('cta_section_bg')['background-image'] ); ?>);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-9">
                 <div class="call-action-content text-center">
-                    <h2 class="action-title">Have any project on mind?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nostrud.</p>
+                    <h2 class="action-title"><?php echo esc_html__(get_theme_mod('cta_title')); ?></h2>
+                    <p><?php echo esc_html__( get_theme_mod('cta_description') ); ?></p>
                     <ul>
-                        <li><a class="main-btn custom" href="#">download cv</a></li>
-                        <li><a class="main-btn custom-2" href="#">hire me</a></li>
+                        <li>
+                            <a class="main-btn custom" href="<?php echo esc_url(get_theme_mod('cta_btn_1_link')); ?>">
+                                <?php echo esc_html__(get_theme_mod('cta_btn_1')); ?>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="main-btn custom-2" href="<?php echo esc_url(get_theme_mod('cta_btn_2_link')); ?>">
+                                <?php echo esc_html__(get_theme_mod('cta_btn_2')); ?>
+                            </a>
+                        </li>
                     </ul>
                 </div> <!-- call action content -->
             </div>

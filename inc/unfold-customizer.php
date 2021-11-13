@@ -487,3 +487,57 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'background',
     'default'       =>  ''
 ]);
+
+// CTA Title
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('CTA title','unfold'),
+    'settings'      =>  'cta_title',
+    'section'       =>  'cta_section',
+    'type'          =>  'text',
+    'default'       =>  'Have any project on mind?'
+]);
+
+// CTA Description
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('CTA Description','unfold'),
+    'settings'      =>  'cta_description',
+    'section'       =>  'cta_section',
+    'type'          =>  'textarea',
+    'default'       =>  'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua nostrud.',
+]);
+
+// CTA button 1 
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('CTA Button 1','unfold'),
+    'settings'      =>  'cta_btn_1',
+    'section'       =>  'cta_section',
+    'type'          =>  'text',
+    'default'       =>  '',
+]);
+
+// CTA button link 1 
+Kirki::add_field( 'unfold', [
+    'label'         =>  esc_html__('CTA Button 1 Link', 'unfold'),
+    'settings'      =>  'cta_btn_1_link',
+    'section'       =>  'cta_section',
+    'type'          =>  'url',
+    'default'       =>  '#'
+]);
+
+// CTA button 2
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('CTA Button 2','unfold'),
+    'settings'      =>  'cta_btn_2',
+    'section'       =>  'cta_section',
+    'type'          =>  'text',
+    'default'       =>  '',
+]);
+
+// CTA button link 2
+Kirki::add_field( 'unfold', [
+    'label'         =>  esc_html__('CTA Button 2 Link', 'unfold'),
+    'settings'      =>  'cta_btn_2_link',
+    'section'       =>  'cta_section',
+    'type'          =>  'url',
+    'default'       =>  '#'
+]);
