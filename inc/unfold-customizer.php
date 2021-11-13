@@ -210,3 +210,103 @@ Kirki::add_field( 'unfold_config', [
     'type'      =>  'textarea',
     'default'   =>  'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.'
 ]);
+
+// About me title
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __('About me title', 'unfold'),
+    'settings'  =>  'about_me_title',
+    'section'   =>  'about_section',
+    'type'      =>  'text',
+    'default'   =>  'Hi There! I\'m Mark Parker'
+]);
+
+// About me description
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __('About me description'),
+    'settings'  =>  'about_me_desc',
+    'section'   =>  'about_section',
+    'type'      =>  'textarea',
+    'default'   =>  'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+]);
+
+// About me single info
+Kirki::add_field( 'unfold_config', [
+    'type'      =>  'repeater',
+    'label'     =>  esc_html__('About Me info', 'unfold'),
+    'settings'  =>  'about_me_single_info',
+    'section'   =>  'about_section',
+    'row_label' =>  [
+        'type'  =>  'field',
+        'value' =>  esc_html__('Item', 'unfold'),
+        'field' =>  'info_label'
+    ],
+    'default'   =>  [
+        [
+            'info_icon'     =>  'lni-calendar',
+            'info_label'    =>  esc_html__('Date of birth:', 'unfold'),
+            'info_value'    =>  esc_html__('8 June 1995', 'unfold')
+        ],
+        [
+            'info_icon'     =>  'lni-envelope',
+            'info_label'    =>  esc_html__('Email:', 'unfold'),
+            'info_value'    =>  esc_html__('jhon@mysite.com', 'unfold')
+        ],
+        [
+            'info_icon'     =>  'lni-phone-handset',
+            'info_label'    =>  esc_html__('Phone:', 'unfold'),
+            'info_value'    =>  esc_html__('+1-202-555-0138', 'unfold')
+        ],
+        [
+            'info_icon'     =>  'lni-calendar',
+            'info_label'    =>  esc_html__('Location:', 'unfold'),
+            'info_value'    =>  esc_html__('4373, El Centro, CA', 'unfold')
+        ],
+    ],
+    'fields'    =>  [
+        'info_icon'  =>      [
+            'type'          =>  'select',
+            'label'         =>  esc_html__('Icon', 'unfold'),
+            'description'   =>  esc_html__('select icon from dropdown list.', 'unfold'),
+            'default'       =>  '',
+            'placeholder'   =>  esc_html__('Select icon', 'unfold'),
+            'multiple'      =>  false,
+            'choices'       =>  [
+                ''                       =>  esc_html__( 'Select', 'unfold'),
+                'lni-calendar'              =>  esc_html__( 'Calendar', 'unfold'),
+                'lni-envelope'              =>  esc_html__( 'Envelope', 'unfold'),
+                'lni-phone-handset'         =>  esc_html__( 'Phone Handset', 'unfold'),
+                'lni-map-marker'            =>  esc_html__( 'Map marker', 'unfold'),
+                'lni-facebook'              =>  esc_html__( 'Facebook', 'unfold'),
+                'lni-facebook-messenger'    =>  esc_html__( 'Facebook messenger', 'unfold'),
+                'lni-facebook-original'     =>  esc_html__( 'Facebook Original', 'unfold'),
+                'lni-facebook-filled'       =>  esc_html__( 'Facebook Filled', 'unfold'),
+                'lni-twitter'               =>  esc_html__( 'Twiiter', 'unfold'),
+                'lni-twitter-original'      =>  esc_html__( 'Twitter Original', 'unfold'),
+                'lni-twitter-filled'        =>  esc_html__( 'Twitter Filled', 'unfold'),
+                'lni-linkedin'              =>  esc_html__( 'Linkedin', 'unfold'),
+                'lni-linkedin-original'     =>  esc_html__( 'Linkedin Original', 'unfold'),
+                'lni-linkedin-filled'       =>  esc_html__( 'Linkedin Filled', 'unfold'),
+                'lni-git'                   =>  esc_html__( 'Git', 'unfold'),
+                'lni-github'                =>  esc_html__( 'Github', 'unfold'),
+                'lni-github-original'       =>  esc_html__( 'Github Original', 'unfold'),
+                'lni-stackoverflow'         =>  esc_html__( 'Stackoverflow', 'unfold'),
+                'lni-website'               =>  esc_html__( 'Website', 'unfold'),
+                'lni-youtube'               =>  esc_html__( 'Youtube', 'unfold'),
+                'lni-wechat'                =>  esc_html__( 'Wechat', 'unfold'),
+                'lni-whatsapp'              =>  esc_html__( 'Whatsapp', 'unfold'),
+                'lni-slack'                 =>  esc_html__( 'Slack', 'unfold'),
+                'lni-skype'                 =>  esc_html__( 'Skype', 'unfold'),
+            ]
+        ],
+        'info_label' =>  [
+            'type'          =>  'text',
+            'label'         =>  esc_html__( 'Label', 'unfold'),
+            'placeholder'   =>  esc_html__( 'Email, Phone', 'unfold'),
+        ],
+        'info_value' =>  [
+            'type'          =>  'text',
+            'label'         =>  esc_html__( 'Value', 'unfold'),
+            'placeholder'   =>  esc_html__( 'mail@example.com', 'unfold')
+        ]
+    ]
+]);

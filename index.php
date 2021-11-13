@@ -18,49 +18,26 @@ get_header();
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-content mt-50">
-                    <h5 class="about-title">Hi There! I'm Mark Parker</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h5 class="about-title"><?php echo get_theme_mod('about_me_title'); ?></h5>
+                    <p><?php echo get_theme_mod('about_me_desc'); ?></p>
                     <ul class="clearfix">
+                        <?php
+                            $about_me_item = get_theme_mod( 'about_me_single_info' );
+                            foreach( $about_me_item as $about_me_items){
+                        ?>
                         <li>
                             <div class="single-info d-flex align-items-center">
                                 <div class="info-icon">
-                                    <i class="lni-calendar"></i>
+                                    <i class="<?php echo $about_me_items['info_icon']; ?>"></i>
                                 </div>
                                 <div class="info-text">
-                                    <p><span>Date of birth:</span> 8 June 1995</p>
+                                    <p><span><?php echo $about_me_items['info_label']; ?></span> <?php echo $about_me_items['info_value']; ?></p>
                                 </div>
                             </div> <!-- single info -->
                         </li>
-                        <li>
-                            <div class="single-info d-flex align-items-center">
-                                <div class="info-icon">
-                                    <i class="lni-envelope"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><span>Email:</span> parker@mysite.com</p>
-                                </div>
-                            </div> <!-- single info -->
-                        </li>
-                        <li>
-                            <div class="single-info d-flex align-items-center">
-                                <div class="info-icon">
-                                    <i class="lni-phone-handset"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><span>Phone:</span> +1-202-555-0138</p>
-                                </div>
-                            </div> <!-- single info -->
-                        </li>
-                        <li>
-                            <div class="single-info d-flex align-items-center">
-                                <div class="info-icon">
-                                    <i class="lni-map-marker"></i>
-                                </div>
-                                <div class="info-text">
-                                    <p><span>Location:</span> 4373, El Centro, CA</p>
-                                </div>
-                            </div> <!-- single info -->
-                        </li>
+                        <?php 
+                            }
+                        ?>
                     </ul>
                 </div> <!-- about content -->
             </div>
