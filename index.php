@@ -159,8 +159,8 @@ get_header();
         <div class="row">
             <div class="col-lg-8">
                 <div class="section-title pb-25">
-                    <h2 class="title">My Recent Works</h2>
-                    <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>
+                    <h2 class="title"><?php echo esc_html__(get_theme_mod('work_section_title'),'unfold'); ?></h2>
+                    <p><?php echo esc_html__(get_theme_mod('work_section_desc'), 'unfold'); ?></p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
