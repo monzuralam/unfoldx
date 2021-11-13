@@ -200,7 +200,9 @@ get_header();
         <div class="row">
             <div class="col-lg-12">
                 <div class="work-more text-center mt-50">
-                    <a class="main-btn" href="#">more works</a>
+                    <a class="main-btn" href="<?php echo esc_url( get_theme_mod('work_section_link'), 'unfold' );?>">
+                        <?php echo esc_html__( get_theme_mod('work_section_btn'), 'unfold' ); ?>
+                    </a>
                 </div> <!-- work more -->
             </div>
         </div> <!-- row -->

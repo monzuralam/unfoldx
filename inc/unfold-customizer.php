@@ -609,3 +609,21 @@ Kirki::add_field( 'unfold_config', [
         ]
     ]
 ]);
+
+// Work section button
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Button Text', 'unfold'),
+    'settings'      =>  'work_section_btn',
+    'section'       =>  'work_section',
+    'type'          =>  'text',
+    'default'       =>  'More Works'
+]);
+
+// Work section button url
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Button URL', 'unfold'),
+    'settings'      =>  'work_section_link',
+    'section'       =>  'work_section',
+    'type'          =>  'url',
+    'default'       =>  '#'
+]);
