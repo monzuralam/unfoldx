@@ -14,6 +14,8 @@
 
 <body <?php body_class(); ?>>
 
+    <?php wp_body_open(); ?>
+    
     <!--====== PRELOADER PART START ======-->
 
     <div class="preloader">
@@ -47,7 +49,7 @@
                                 $custom_logo_id = get_theme_mod('custom_logo');
                                 $logo = wp_get_attachment_image_src( $custom_logo_id, 'full');
                             ?>
-                            <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
+                            <a class="navbar-brand" href="<?php echo esc_url( home_url('/') ); ?>">
                                 <?php
                                     if( has_custom_logo() ){
                                 ?>
