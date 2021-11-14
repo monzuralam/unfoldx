@@ -222,8 +222,18 @@ get_header();
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center pb-25">
-                    <h2 class="title">My Pricing Plans</h2>
-                    <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>
+                    <h2 class="title">
+                        <?php 
+                            $price_section_title = get_theme_mod('price_section_title');
+                            printf( __('%1$s', 'unfold'), $price_section_title );
+                        ?>
+                    </h2>
+                    <p>
+                        <?php
+                            $price_section_desc = get_theme_mod('price_section_desc');
+                            printf( __('%1$s', 'unfold'), $price_section_desc );
+                        ?>
+                    </p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->

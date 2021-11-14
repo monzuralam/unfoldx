@@ -646,3 +646,21 @@ Kirki::add_field( 'unfold_config', [
         'off'       =>  esc_html__('Off','unfold')
     ]
 ]);
+
+// Pricing Title
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__( 'Section Title', 'unfold'),
+    'settings'      =>  'price_section_title',
+    'section'       =>  'price_section',
+    'type'          =>  'text',
+    'default'       =>  esc_html__( 'Pricing Plans', 'unfold')
+]);
+
+// Pricing Description
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__( 'Section desc', 'unfold'),
+    'settings'      =>  'price_section_desc',
+    'section'       =>  'price_section',
+    'type'          =>  'text',
+    'default'       =>  esc_html__( 'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.', 'unfold'),
+]);
