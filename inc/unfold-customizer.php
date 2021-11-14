@@ -627,3 +627,22 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'url',
     'default'       =>  '#'
 ]);
+
+// Pricing Plan section
+Kirki::add_section( 'price_section', [
+    'title'         =>  esc_html__( 'Pricing Plan Seciton', 'unfold'),
+    'panel'         =>  'unfold_panel',
+]);
+
+// Pricing plan enable
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Enable Pricing plan section', 'unfold'),
+    'settings'      =>  'price_section_enable',
+    'section'       =>  'price_section',
+    'type'          =>  'switch',
+    'default'       =>  'on',
+    'choices'       =>  [
+        'on'        =>  esc_html__('On','unfold'),
+        'off'       =>  esc_html__('Off','unfold')
+    ]
+]);

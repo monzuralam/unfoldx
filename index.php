@@ -214,7 +214,9 @@ get_header();
 <!--====== WORK PART ENDS ======-->
 
 <!--====== PRICING PART START ======-->
-
+<?php
+    if( true == get_theme_mod('price_section_enable') ){
+?>
 <section id="pricing" class="pricing-area gray-bg pt-125 pb-130">
     <div class="container">
         <div class="row justify-content-center">
@@ -307,7 +309,9 @@ get_header();
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-
+<?php 
+    }
+?>
 <!--====== PRICING PART ENDS ======-->
 
 <!--====== BLOG PART START ======-->
