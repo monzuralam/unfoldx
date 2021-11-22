@@ -238,84 +238,44 @@ get_header();
             </div>
         </div> <!-- row -->
         <div class="row justify-content-center">
+            <?php
+                $price_table = get_theme_mod('price_section_table');
+                echo "<pre>";
+                print_r($price_table);
+                echo "</pre>";
+                foreach( $price_table as $table_data ){
+            ?>
             <div class="col-lg-4 col-md-8 col-sm-9">
-                <div class="single-pricing text-center mt-30">
+                <div class="single-pricing <?php echo esc_attr(isset($table_data['price_table_recommended'])) ? 'active' : ''  ?> text-center mt-30">
                     <div class="pricing-package">
-                        <h4 class="package-title">Basic</h4>
+                        <h4 class="package-title"><?php echo esc_html__($table_data['price_table_title'], 'unfold'); ?></h4>
                     </div>
                     <div class="pricing-body">
                         <div class="pricing-text">
-                            <p>Simple project management for teams and small businesses.</p>
-                            <span class="price">$19.00</span>
+                            <p><?php echo esc_html__($table_data['price_table_desc'], 'unfold'); ?></p>
+                            <span class="price"><?php echo esc_html__($table_data['price_table_price'], 'unfold'); ?></span>
                         </div>
                         <div class="pricing-list">
                             <ul>
-                                <li>Unlimited Tasks</li>
-                                <li>Unlimited Public</li>
-                                <li>Private Projects</li>
-                                <li>Unlimited Teams</li>
-                                <li>All Integrations</li>
-                                <li>Public API</li>
+                                <li><?php echo esc_html__($table_data['price_table_fea_1'], 'unfold'); ?></li>
+                                <li><?php echo esc_html__($table_data['price_table_fea_2'], 'unfold'); ?></li>
+                                <li><?php echo esc_html__($table_data['price_table_fea_3'], 'unfold'); ?></li>
+                                <li><?php echo esc_html__($table_data['price_table_fea_4'], 'unfold'); ?></li>
+                                <li><?php echo esc_html__($table_data['price_table_fea_5'], 'unfold'); ?></li>
+                                <li><?php echo esc_html__($table_data['price_table_fea_6'], 'unfold'); ?></li>
                             </ul>
                         </div>
                         <div class="pricing-btn">
-                            <a class="main-btn" href="#contact">get quote</a>
+                            <a class="main-btn" href="<?php echo esc_html__($table_data['price_table_link'], 'unfold'); ?>">
+                                <?php echo esc_html__($table_data['price_table_btn'], 'unfold'); ?>
+                            </a>
                         </div>
                     </div>
                 </div> <!-- single pricing -->
             </div>
-            <div class="col-lg-4 col-md-8 col-sm-9">
-                <div class="single-pricing active text-center mt-30">
-                    <div class="pricing-package">
-                        <h4 class="package-title">Standard</h4>
-                    </div>
-                    <div class="pricing-body">
-                        <div class="pricing-text">
-                            <p>Simple project management for teams and small businesses.</p>
-                            <span class="price">$39.00</span>
-                        </div>
-                        <div class="pricing-list">
-                            <ul>
-                                <li>Unlimited Tasks</li>
-                                <li>Unlimited Public</li>
-                                <li>Private Projects</li>
-                                <li>Unlimited Teams</li>
-                                <li>All Integrations</li>
-                                <li>Public API</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-btn">
-                            <a class="main-btn" href="#contact">get quote</a>
-                        </div>
-                    </div>
-                </div> <!-- single pricing -->
-            </div>
-            <div class="col-lg-4 col-md-8 col-sm-9">
-                <div class="single-pricing text-center mt-30">
-                    <div class="pricing-package">
-                        <h4 class="package-title">Premium</h4>
-                    </div>
-                    <div class="pricing-body">
-                        <div class="pricing-text">
-                            <p>Simple project management for teams and small businesses.</p>
-                            <span class="price">$29.00</span>
-                        </div>
-                        <div class="pricing-list">
-                            <ul>
-                                <li>Unlimited Tasks</li>
-                                <li>Unlimited Public</li>
-                                <li>Private Projects</li>
-                                <li>Unlimited Teams</li>
-                                <li>All Integrations</li>
-                                <li>Public API</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-btn">
-                            <a class="main-btn" href="#contact">get quote</a>
-                        </div>
-                    </div>
-                </div> <!-- single pricing -->
-            </div>
+            <?php
+                }
+            ?>
         </div> <!-- row -->
     </div> <!-- container -->
 </section>

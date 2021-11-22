@@ -664,3 +664,79 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'text',
     'default'       =>  esc_html__( 'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.', 'unfold'),
 ]);
+
+// Pricing Table
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Pricing Package', 'unfold'),
+    'settings'      =>  'price_section_table',
+    'section'       =>  'price_section',
+    'type'          =>  'repeater',
+    'default'       =>  [],
+    'row_label'     =>  [
+        'type'      =>  'field',
+        'value'     =>  esc_html__('Package','unfold'),
+        'field'     =>  'price_table_title'
+    ],
+    'fields'        =>  [
+        'price_table_title' =>  [
+            'type'      =>   'text',
+            'label'     =>  esc_html__('Package Title','unfold'),
+            'default'   =>  'Basic',
+        ],
+        'price_table_desc'  =>  [
+            'type'      =>  'textarea',
+            'label'     =>  esc_html__('Package Description','unfold'),
+            'default'   =>  '',
+        ],
+        'price_table_fea_1' =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Feature 1','unfold'),
+            'default'   =>  'Lorem Ipsum'
+        ],
+        'price_table_fea_2' =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Feature 2','unfold'),
+            'default'   => 'Lorem Ipsum'
+        ],
+        'price_table_fea_3' =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Feature 3','unfold'),
+            'default'   => 'Lorem Ipsum'
+        ],
+        'price_table_fea_4' =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Feature 4','unfold'),
+            'default'   => 'Lorem Ipsum'
+        ],
+        'price_table_fea_5' =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Feature 5','unfold'),
+            'default'   => 'Lorem Ipsum'
+        ],
+        'price_table_fea_6' =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Feature 6','unfold'),
+            'default'   => 'Lorem Ipsum'
+        ],
+        'price_table_price' =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Package Price','unfold'),
+            'default'   => '$18.00'
+        ],
+        'price_table_btn'   =>  [
+            'type'      =>  'text',
+            'label'     =>  esc_html__('Button Text','unfold'),
+            'default'   => 'Quote'
+        ],
+        'price_table_link'   =>  [
+            'type'      =>  'url',
+            'label'     =>  esc_html__('Button URL','unfold'),
+            'default'   =>  '#'
+        ],
+        'price_table_recommended'   =>  [
+            'type'      =>  'checkbox',
+            'label'     =>  esc_html__('Recommended Package','unfold'),
+            'default'   =>  ''
+        ],
+    ]
+]);
