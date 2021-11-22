@@ -28,6 +28,9 @@ function unfold_theme_setup(){
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+    // Feed link
+    add_theme_support( 'automatic-feed-links' );
+
     /**
      * Custom image size
      */
