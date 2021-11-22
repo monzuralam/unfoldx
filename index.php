@@ -415,8 +415,16 @@ get_header();
                     </div>
                     <div class="contact-content">
                         <h6 class="contact-title">Phone</h6>
-                        <p>+931 2222 5555</p>
-                        <p>+547 5554 6663</p>
+                        <p>
+                            <a href="tel:<?php echo esc_attr(get_theme_mod('contact_section_phone')) ?>">
+                                <?php echo esc_html(get_theme_mod('contact_section_phone')); ?>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="tel:<?php echo esc_attr(get_theme_mod('contact_section_mobile')) ?>">
+                                <?php echo esc_html(get_theme_mod('contact_section_mobile')); ?>
+                            </a>
+                        </p>
                     </div>
                 </div> <!-- contact box -->
             </div>

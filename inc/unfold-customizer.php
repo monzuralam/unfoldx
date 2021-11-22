@@ -832,3 +832,21 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'textarea',
     'default'       =>  '123 Stree New York City , United States Of America 750'
 ]);
+
+// Contact section phone
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Phone Number ', 'unfold'),
+    'settings'      =>  'contact_section_phone',
+    'section'       =>  'contact_section',
+    'type'          =>  'text',
+    'default'       =>  '+931 2222 5555'
+]);
+
+// Contact section mobile
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Mobile Number ', 'unfold'),
+    'settings'      =>  'contact_section_mobile',
+    'section'       =>  'contact_section',
+    'type'          =>  'text',
+    'default'       =>  '+931 2222 6666'
+]);
