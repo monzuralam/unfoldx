@@ -347,14 +347,32 @@ get_header();
 <!--====== BLOG PART ENDS ======-->
 
 <!--====== CONTACT PART START ======-->
-
+<?php
+    if( true == get_theme_mod('contact_section_enable') ){
+?>
 <section id="contact" class="contact-area pt-125 pb-130 gray-bg">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center pb-25">
-                    <h2 class="title">Get In Touch</h2>
-                    <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>
+                    <h2 class="title">
+                        <?php 
+                            $contact_section_title = get_theme_mod('contact_section_title');
+                            printf( 
+                                esc_html__( '%1$s', 'unfold'), 
+                                $contact_section_title 
+                            ); 
+                        ?>
+                    </h2>
+                    <p>
+                        <?php
+                            $contact_section_desc = get_theme_mod('contact_section_desc');
+                            printf(
+                                esc_html__( '%1$s', 'unfold'),
+                                $contact_section_desc
+                            );
+                        ?>
+                    </p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
@@ -425,7 +443,9 @@ get_header();
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-
+<?php 
+    }
+?>
 <!--====== CONTACT PART ENDS ======-->
 
 <?php

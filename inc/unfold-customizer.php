@@ -741,13 +741,13 @@ Kirki::add_field( 'unfold_config', [
     ]
 ]);
 
-// About Section
+// Blog Section
 Kirki::add_section( 'blog_section', array(
     'title'         =>  __( 'Blog Section', 'unfold' ),
     'panel'         =>  'unfold_panel'
 ));
 
-// Enable About Section
+// Enable Blog Section
 Kirki::add_field( 'unfold_config', array(
     'label'     =>  __('Enable Blog Section ?'),
     'settings'  =>  'blog_section_enable',
@@ -785,4 +785,41 @@ Kirki::add_field( 'unfold_config', [
     'section'       =>  'blog_section',
     'type'          =>  'url',
     'default'       =>  '#'
+]);
+
+// Contact Section
+Kirki::add_section( 'contact_section', array(
+    'title'         =>  __( 'Contact Section', 'unfold' ),
+    'panel'         =>  'unfold_panel'
+));
+
+// Enable Contact Section
+Kirki::add_field( 'unfold_config', array(
+    'label'     =>  __('Enable Contact Section ?'),
+    'settings'  =>  'contact_section_enable',
+    'section'   =>  'contact_section',
+    'type'      =>  'switch',
+    'default'   =>  'on',
+    'choices'   =>  [
+        'on'    =>  esc_html__('Yes', 'unfold'),
+        'off'   =>  esc_html__('No', 'unfold')
+    ]
+));
+
+// Contact section title
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Section Title', 'unfold'),
+    'settings'      =>  'contact_section_title',
+    'section'       =>  'contact_section',
+    'type'          =>  'text',
+    'default'       =>  'Contact',
+]);
+
+// Contact section description
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Section description', 'unfold'),
+    'settings'      =>  'contact_section_desc',
+    'section'       =>  'contact_section',
+    'type'          =>  'textarea',
+    'default'       =>  'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.'
 ]);
