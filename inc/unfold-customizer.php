@@ -182,7 +182,7 @@ Kirki::add_section( 'about_section', array(
 
 // Enable About Section
 Kirki::add_field( 'unfold_config', array(
-    'label'     =>  __('Enable About Section ?'),
+    'label'     =>  __('Enable About Section ?','unfold'),
     'settings'  =>  'about_section_enable',
     'section'   =>  'about_section',
     'type'      =>  'switch',
@@ -222,7 +222,7 @@ Kirki::add_field( 'unfold_config', [
 
 // About me description
 Kirki::add_field( 'unfold_config', [
-    'label'     =>  __('About me description'),
+    'label'     =>  __('About me description', 'unfold'),
     'settings'  =>  'about_me_desc',
     'section'   =>  'about_section',
     'type'      =>  'textarea',
@@ -462,7 +462,7 @@ Kirki::add_field( 'unfold_config', [
 
 // Call to action
 Kirki::add_section( 'cta_section', [
-    'title'         =>  esc_html__('CTA Section'),
+    'title'         =>  esc_html__('CTA Section', 'unfold'),
     'panel'         =>  'unfold_panel'
 ]);
 
@@ -749,7 +749,7 @@ Kirki::add_section( 'blog_section', array(
 
 // Enable Blog Section
 Kirki::add_field( 'unfold_config', array(
-    'label'     =>  __('Enable Blog Section ?'),
+    'label'     =>  __('Enable Blog Section ?', 'unfold'),
     'settings'  =>  'blog_section_enable',
     'section'   =>  'blog_section',
     'type'      =>  'switch',
@@ -795,7 +795,7 @@ Kirki::add_section( 'contact_section', array(
 
 // Enable Contact Section
 Kirki::add_field( 'unfold_config', array(
-    'label'     =>  __('Enable Contact Section ?'),
+    'label'     =>  __('Enable Contact Section ?', 'unfold'),
     'settings'  =>  'contact_section_enable',
     'section'   =>  'contact_section',
     'type'      =>  'switch',
@@ -822,4 +822,13 @@ Kirki::add_field( 'unfold_config', [
     'section'       =>  'contact_section',
     'type'          =>  'textarea',
     'default'       =>  'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.'
+]);
+
+// Contact section address
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Address', 'unfold'),
+    'settings'      =>  'contact_section_address',
+    'section'       =>  'contact_section',
+    'type'          =>  'textarea',
+    'default'       =>  '123 Stree New York City , United States Of America 750'
 ]);

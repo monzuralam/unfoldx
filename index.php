@@ -383,8 +383,16 @@ get_header();
                         <i class="lni-map-marker"></i>
                     </div>
                     <div class="contact-content">
-                        <h6 class="contact-title">Address</h6>
-                        <p>123 Stree New York City , United States Of America 750</p>
+                        <h6 class="contact-title"><?php echo __('Address','unfold'); ?></h6>
+                        <p>
+                            <?php
+                                $address = get_theme_mod('contact_section_address');
+                                printf( 
+                                    __('%1$s','unfold'),
+                                    $address
+                                );
+                            ?>
+                        </p>
                     </div>
                 </div> <!-- contact box -->
             </div>
