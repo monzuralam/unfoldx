@@ -414,7 +414,7 @@ get_header();
                         <i class="lni-phone"></i>
                     </div>
                     <div class="contact-content">
-                        <h6 class="contact-title">Phone</h6>
+                        <h6 class="contact-title"><?php echo __('Phone','unfold'); ?></h6>
                         <p>
                             <a href="tel:<?php echo esc_attr(get_theme_mod('contact_section_phone')) ?>">
                                 <?php echo esc_html(get_theme_mod('contact_section_phone')); ?>
@@ -434,9 +434,17 @@ get_header();
                         <i class="lni-envelope"></i>
                     </div>
                     <div class="contact-content">
-                        <h6 class="contact-title">Email</h6>
-                        <p>support@yourmail.com</p>
-                        <p>info@helpline.com</p>
+                        <h6 class="contact-title"><?php echo __('Email','unfold'); ?></h6>
+                        <p>
+                            <a href="mailto:<?php echo esc_attr(get_theme_mod('contact_section_email_1')) ?>">
+                                <?php echo esc_html(get_theme_mod('contact_section_email_1')); ?>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="mailto:<?php echo esc_attr(get_theme_mod('contact_section_email_2')) ?>">
+                                <?php echo esc_html(get_theme_mod('contact_section_email_2')); ?>
+                            </a>
+                        </p>
                     </div>
                 </div> <!-- contact box -->
             </div>

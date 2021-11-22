@@ -850,3 +850,21 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'text',
     'default'       =>  '+931 2222 6666'
 ]);
+
+// Contact section email 1
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Email address 1 ', 'unfold'),
+    'settings'      =>  'contact_section_email_1',
+    'section'       =>  'contact_section',
+    'type'          =>  'text',
+    'default'       =>  'support@yourmail.com'
+]);
+
+// Contact section email 2
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Email address 2 ', 'unfold'),
+    'settings'      =>  'contact_section_email_2',
+    'section'       =>  'contact_section',
+    'type'          =>  'text',
+    'default'       =>  'info@yourmail.com'
+]);
