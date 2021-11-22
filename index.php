@@ -10,16 +10,20 @@ get_header();
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center">
-                    <h2 class="title"><?php echo get_theme_mod('about_section_title'); ?></h2>
-                    <p><?php echo get_theme_mod('about_section_desc'); ?></p>
+                    <h2 class="title">
+                        <?php 
+                            echo esc_html(get_theme_mod('about_section_title')); 
+                        ?>
+                    </h2>
+                    <p><?php echo esc_html(get_theme_mod('about_section_desc')); ?></p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-content mt-50">
-                    <h5 class="about-title"><?php echo get_theme_mod('about_me_title'); ?></h5>
-                    <p><?php echo get_theme_mod('about_me_desc'); ?></p>
+                    <h5 class="about-title"><?php echo esc_html(get_theme_mod('about_me_title')); ?></h5>
+                    <p><?php echo esc_html(get_theme_mod('about_me_desc')); ?></p>
                     <ul class="clearfix">
                         <?php
                             $about_me_item = get_theme_mod( 'about_me_single_info' );
@@ -85,8 +89,8 @@ get_header();
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center pb-30">
-                    <h2 class="title"><?php echo get_theme_mod('service_section_title'); ?></h2>
-                    <p><?php echo get_theme_mod('service_section_desc'); ?></p>
+                    <h2 class="title"><?php echo esc_html(get_theme_mod('service_section_title')); ?></h2>
+                    <p><?php echo esc_html(get_theme_mod('service_section_desc')); ?></p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
@@ -159,8 +163,8 @@ get_header();
         <div class="row">
             <div class="col-lg-8">
                 <div class="section-title pb-25">
-                    <h2 class="title"><?php echo esc_html__(get_theme_mod('work_section_title'),'unfold'); ?></h2>
-                    <p><?php echo esc_html__(get_theme_mod('work_section_desc'), 'unfold'); ?></p>
+                    <h2 class="title"><?php echo esc_html(get_theme_mod('work_section_title')); ?></h2>
+                    <p><?php echo esc_html(get_theme_mod('work_section_desc')); ?></p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
@@ -176,10 +180,10 @@ get_header();
                     </div>
                     <div class="work-overlay">
                         <div class="work-content">
-                            <h3 class="work-title"><?php echo esc_html__($work_section_item['work_title'], 'unfold'); ?></h3>
+                            <h3 class="work-title"><?php echo esc_html( $work_section_item['work_title'] ); ?></h3>
                             <ul>
                                 <li>
-                                    <a class="image-popup" href="<?php echo wp_get_attachment_image_src( $work_section_item['work_img'], null, false)[0];?>">
+                                    <a class="image-popup" href="<?php echo esc_url( wp_get_attachment_image_src( $work_section_item['work_img'], null, false )[0] );?>">
                                         <i class="lni-plus"></i>
                                     </a>
                                 </li>
@@ -200,8 +204,8 @@ get_header();
         <div class="row">
             <div class="col-lg-12">
                 <div class="work-more text-center mt-50">
-                    <a class="main-btn" href="<?php echo esc_url( get_theme_mod('work_section_link'), 'unfold' );?>">
-                        <?php echo esc_html__( get_theme_mod('work_section_btn'), 'unfold' ); ?>
+                    <a class="main-btn" href="<?php echo esc_url( get_theme_mod('work_section_link') );?>">
+                        <?php echo esc_html( get_theme_mod('work_section_btn') ); ?>
                     </a>
                 </div> <!-- work more -->
             </div>
@@ -245,26 +249,26 @@ get_header();
             <div class="col-lg-4 col-md-8 col-sm-9">
                 <div class="single-pricing <?php echo esc_attr(isset($table_data['price_table_recommended'])) ? 'active' : ''  ?> text-center mt-30">
                     <div class="pricing-package">
-                        <h4 class="package-title"><?php echo esc_html__($table_data['price_table_title'], 'unfold'); ?></h4>
+                        <h4 class="package-title"><?php echo esc_html($table_data['price_table_title']); ?></h4>
                     </div>
                     <div class="pricing-body">
                         <div class="pricing-text">
-                            <p><?php echo esc_html__($table_data['price_table_desc'], 'unfold'); ?></p>
-                            <span class="price"><?php echo esc_html__($table_data['price_table_price'], 'unfold'); ?></span>
+                            <p><?php echo esc_html($table_data['price_table_desc']); ?></p>
+                            <span class="price"><?php echo esc_html($table_data['price_table_price']); ?></span>
                         </div>
                         <div class="pricing-list">
                             <ul>
-                                <li><?php echo esc_html__($table_data['price_table_fea_1'], 'unfold'); ?></li>
-                                <li><?php echo esc_html__($table_data['price_table_fea_2'], 'unfold'); ?></li>
-                                <li><?php echo esc_html__($table_data['price_table_fea_3'], 'unfold'); ?></li>
-                                <li><?php echo esc_html__($table_data['price_table_fea_4'], 'unfold'); ?></li>
-                                <li><?php echo esc_html__($table_data['price_table_fea_5'], 'unfold'); ?></li>
-                                <li><?php echo esc_html__($table_data['price_table_fea_6'], 'unfold'); ?></li>
+                                <li><?php echo esc_html($table_data['price_table_fea_1']); ?></li>
+                                <li><?php echo esc_html($table_data['price_table_fea_2']); ?></li>
+                                <li><?php echo esc_html($table_data['price_table_fea_3']); ?></li>
+                                <li><?php echo esc_html($table_data['price_table_fea_4']); ?></li>
+                                <li><?php echo esc_html($table_data['price_table_fea_5']); ?></li>
+                                <li><?php echo esc_html($table_data['price_table_fea_6']); ?></li>
                             </ul>
                         </div>
                         <div class="pricing-btn">
-                            <a class="main-btn" href="<?php echo esc_html__($table_data['price_table_link'], 'unfold'); ?>">
-                                <?php echo esc_html__($table_data['price_table_btn'], 'unfold'); ?>
+                            <a class="main-btn" href="<?php echo esc_url($table_data['price_table_link']); ?>">
+                                <?php echo esc_html($table_data['price_table_btn']); ?>
                             </a>
                         </div>
                     </div>
@@ -292,12 +296,20 @@ get_header();
                 <div class="section-title text-center pb-25">
                     <h2 class="title">
                         <?php 
-                            echo esc_html__(get_theme_mod('blog_section_title'),'unfold');
+                            $blog_section_title = get_theme_mod('blog_section_title');
+                            printf(
+                                __('%1$s', 'unfold'),
+                                $blog_section_title
+                            );
                         ?>
                     </h2>
                     <p>
                         <?php 
-                            echo esc_html__(get_theme_mod('blog_section_desc'),'unfold');
+                            $blog_section_desc = get_theme_mod('blog_section_desc');
+                            printf(
+                                __('%1$s', 'unfold'),
+                                $blog_section_desc
+                            );
                         ?>
                     </p>
                 </div> <!-- section title -->
@@ -359,7 +371,7 @@ get_header();
                         <?php 
                             $contact_section_title = get_theme_mod('contact_section_title');
                             printf( 
-                                esc_html__( '%1$s', 'unfold'), 
+                                __( '%1$s', 'unfold'), 
                                 $contact_section_title 
                             ); 
                         ?>
@@ -368,7 +380,7 @@ get_header();
                         <?php
                             $contact_section_desc = get_theme_mod('contact_section_desc');
                             printf(
-                                esc_html__( '%1$s', 'unfold'),
+                                __( '%1$s', 'unfold'),
                                 $contact_section_desc
                             );
                         ?>
