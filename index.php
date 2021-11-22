@@ -240,9 +240,6 @@ get_header();
         <div class="row justify-content-center">
             <?php
                 $price_table = get_theme_mod('price_section_table');
-                echo "<pre>";
-                print_r($price_table);
-                echo "</pre>";
                 foreach( $price_table as $table_data ){
             ?>
             <div class="col-lg-4 col-md-8 col-sm-9">
@@ -285,14 +282,24 @@ get_header();
 <!--====== PRICING PART ENDS ======-->
 
 <!--====== BLOG PART START ======-->
-
+<?php
+    if( true == get_theme_mod('blog_section_enable') ){
+?>
 <section id="blog" class="blog-area pt-125 pb-130">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center pb-25">
-                    <h2 class="title">From The Blog</h2>
-                    <p>Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.</p>
+                    <h2 class="title">
+                        <?php 
+                            echo esc_html__(get_theme_mod('blog_section_title'),'unfold');
+                        ?>
+                    </h2>
+                    <p>
+                        <?php 
+                            echo esc_html__(get_theme_mod('blog_section_desc'),'unfold');
+                        ?>
+                    </p>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
@@ -340,7 +347,9 @@ get_header();
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
-
+<?php 
+    }
+?>
 <!--====== BLOG PART ENDS ======-->
 
 <!--====== CONTACT PART START ======-->
