@@ -777,3 +777,12 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'textarea',
     'default'       =>  'Nunc id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis, urna est ultricies eros, ac porta sem turpis quis leo.'
 ]);
+
+// Blog Button Link
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Button Link','unfold'),
+    'settings'      =>  'blog_section_link',
+    'section'       =>  'blog_section',
+    'type'          =>  'url',
+    'default'       =>  '#'
+]);

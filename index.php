@@ -304,44 +304,38 @@ get_header();
             </div>
         </div> <!-- row -->
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-8 col-sm-9">
-                <div class="single-blog mt-30">
-                    <div class="blog-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/b-1.jpg" alt="Blog">
-                    </div>
-                    <div class="blog-content">
-                        <h4 class="blog-title"><a href="#">Hired Releases 2023 Brand Health.</a></h4>
-                        <span>July 26, 2022</span>
-                    </div>
-                </div> <!-- single blog -->
-            </div>
-            <div class="col-lg-4 col-md-8 col-sm-9">
-                <div class="single-blog mt-30">
-                    <div class="blog-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/b-2.jpg" alt="Blog">
-                    </div>
-                    <div class="blog-content">
-                        <h4 class="blog-title"><a href="#">Hired Releases 2023 Brand Health.</a></h4>
-                        <span>July 26, 2022</span>
-                    </div>
-                </div> <!-- single blog -->
-            </div>
-            <div class="col-lg-4 col-md-8 col-sm-9">
-                <div class="single-blog mt-30">
-                    <div class="blog-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/b-3.jpg" alt="Blog">
-                    </div>
-                    <div class="blog-content">
-                        <h4 class="blog-title"><a href="#">Hired Releases 2023 Brand Health.</a></h4>
-                        <span>July 26, 2022</span>
-                    </div>
-                </div> <!-- single blog -->
-            </div>
+            <?php
+                $blog = new WP_query(array(
+                    'posts_per_page'    =>  3,
+                ));
+                if($blog->have_posts()){
+                    while( $blog->have_posts() ){
+                        $blog->the_post();
+                        ?>
+                        <div class="col-lg-4 col-md-8 col-sm-9">
+                            <div class="single-blog mt-30">
+                                <div class="blog-image">
+                                    <?php
+                                        if( has_post_thumbnail() ){
+                                            the_post_thumbnail( 'blog_thumb' );
+                                        }
+                                    ?>
+                                </div>
+                                <div class="blog-content">
+                                    <h4 class="blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                    <span><?php echo date("F j, Y"); ?></span>
+                                </div>
+                            </div> <!-- single blog -->
+                        </div>
+                        <?php
+                    }
+                }
+            ?>
         </div> <!-- row -->
         <div class="row">
             <div class="col-lg-12">
                 <div class="blog-more text-center mt-50">
-                    <a class="main-btn" href="#">More posts</a>
+                    <a class="main-btn" href="<?php echo esc_url(get_theme_mod('blog_section_link')); ?>">More posts</a>
                 </div> <!-- blog more -->
             </div>
         </div> <!-- row -->
