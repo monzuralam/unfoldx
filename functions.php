@@ -28,6 +28,11 @@ function unfold_theme_setup(){
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+    /**
+     * Custom image size
+     */
+    add_image_size('blog_thumb', 360, 360, true);
+
     // Title support
     add_theme_support( 'title-tag' );
 
