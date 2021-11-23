@@ -877,3 +877,12 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'text',
     'default'       =>  ''
 ]);
+
+// Contact Section Maps
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Google maps Embed', 'unfold'),
+    'settings'      =>  'contact_section_maps',
+    'section'       =>  'contact_section',
+    'type'          =>  'code',
+    'default'       =>  ''
+]);

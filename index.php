@@ -464,7 +464,20 @@ get_header();
             <div class="col-lg-6">
                 <div class="contact-map mt-60">
                     <div class="gmap_canvas">
-                        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <?php
+                            $maps = get_theme_mod('contact_section_maps');
+
+                            $allowed_html = [
+                                'iframe'      => [
+                                    'src'       => [],
+                                    'loading'   => [],
+                                    'style'     => [],
+                                    'allowfullscreen' => [],
+                                ],
+                            ];
+                            
+                            echo wp_kses( $maps, $allowed_html );
+                        ?>
                     </div>
                 </div> <!-- contact map -->
             </div>
