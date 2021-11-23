@@ -868,3 +868,12 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'text',
     'default'       =>  'info@yourmail.com'
 ]);
+
+// Contact form 
+Kirki::add_field( 'unfold_config', [
+    'label'         =>  esc_html__('Contact Form 7 shortcode', 'unfold'),
+    'settings'      =>  'contact_form_7',
+    'section'       =>  'contact_section',
+    'type'          =>  'text',
+    'default'       =>  ''
+]);

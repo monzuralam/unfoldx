@@ -452,21 +452,13 @@ get_header();
         <div class="row">
             <div class="col-lg-6">
                 <div class="contact-form pt-30">
-                    <form id="contact-form" action="assets/contact.php">
-                        <div class="single-form">
-                            <input type="text" name="name" placeholder="Name">
-                        </div> <!-- single form -->
-                        <div class="single-form">
-                            <input type="email" name="email" placeholder="Email">
-                        </div> <!-- single form -->
-                        <div class="single-form">
-                            <textarea name="message" placeholder="Message"></textarea>
-                        </div> <!-- single form -->
-                        <p class="form-message"></p>
-                        <div class="single-form">
-                            <button class="main-btn" type="submit">Send Message</button>
-                        </div> <!-- single form -->
-                    </form>
+                    <?php
+                        $cf_7 = do_shortcode(get_theme_mod('contact_form_7'));
+                        printf(
+                            __('%1$s', 'unfold'),
+                            $cf_7
+                        )
+                    ?>
                 </div> <!-- contact form -->
             </div>
             <div class="col-lg-6">

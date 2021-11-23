@@ -1748,3 +1748,21 @@ p.form-message.success, p.form-message.error {
       cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
+
+/*** Custom CSS ***/
+.single-form span {
+  display: block;
+}
+
+.main-btn {
+  width: min-content !important;
+  border: 1px solid #754ef9 !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+}
+
+.main-btn:hover {
+  background-color: #fff !important;
+  color: #754ef9 !important;
+  border-color: #754ef9 !important;
+}
