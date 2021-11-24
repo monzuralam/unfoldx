@@ -97,34 +97,34 @@
         ?>
             <div id="parallax" class="header-content d-flex align-items-center">
                 <div class="header-shape shape-one layer" data-depth="0.10">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-1.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-1.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-tow layer" data-depth="0.30">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-2.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-2.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-three layer" data-depth="0.40">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-3.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-3.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-fore layer" data-depth="0.60">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-2.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-2.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-five layer" data-depth="0.20">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-1.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-1.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-six layer" data-depth="0.15">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-4.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-4.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-seven layer" data-depth="0.50">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-5.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-5.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-eight layer" data-depth="0.40">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-3.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-3.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-nine layer" data-depth="0.20">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-6.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-6.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="header-shape shape-ten layer" data-depth="0.30">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner/shape/shape-3.png" alt="Shape">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/banner/shape/shape-3.png" alt="Shape">
                 </div> <!-- header shape -->
                 <div class="container">
                     <div class="row align-items-center">
