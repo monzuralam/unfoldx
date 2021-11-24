@@ -7,9 +7,17 @@
                 <div class="col-lg-8">
                     <div class="footer-content text-center">
                         <a href="index.html">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-2.png" alt="Logo">
+                            <img src="<?php echo esc_url(get_theme_mod('footer_section_logo')); ?>" alt="<?php echo esc_url(home_url()); ?>">
                         </a>
-                        <p class="mt-">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci- didunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe- rcitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="mt-">
+                            <?php 
+                                $footer_section_desc = get_theme_mod('footer_section_desc');
+                                printf(
+                                    __('%1$s','unfold'),
+                                    $footer_section_desc
+                                );
+                            ?>
+                        </p>
                         <ul>
                             <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
                             <li><a href="#"><i class="lni-twitter-original"></i></a></li>

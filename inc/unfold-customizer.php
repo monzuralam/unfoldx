@@ -886,3 +886,40 @@ Kirki::add_field( 'unfold_config', [
     'type'          =>  'code',
     'default'       =>  ''
 ]);
+
+// Footer Panel
+Kirki::add_panel( 'footer_panel', array(
+    'title'         =>  __( 'Footer', 'unfold' ),
+    'description'   =>  __( 'Customize footer options.', 'unfold'), 
+    'priority'      =>  20
+));
+
+// footer logo section
+Kirki::add_section( 'footer_logo_section', [
+    'title'         =>  esc_html__('Logo','unfold'),
+    'panel'         =>  'footer_panel'
+]);
+
+// Footer Logo
+Kirki::add_field( 'footer_panel', [
+    'label'         =>  esc_html__('Light Logo', 'unfold'),
+    'settings'      =>  'footer_section_logo',
+    'section'       =>  'footer_logo_section',
+    'type'          =>  'image',
+    'default'       =>  ''
+]);
+
+// footer logo section
+Kirki::add_section( 'footer_desc_section', [
+    'title'         =>  esc_html__('Description','unfold'),
+    'panel'         =>  'footer_panel'
+]);
+
+// Footer Logo
+Kirki::add_field( 'footer_panel', [
+    'label'         =>  esc_html__('Description', 'unfold'),
+    'settings'      =>  'footer_section_desc',
+    'section'       =>  'footer_desc_section',
+    'type'          =>  'textarea',
+    'default'       =>  'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci- didunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe- rcitation ullamco laboris nisi ut aliquip ex ea commodo consequat'
+]);
