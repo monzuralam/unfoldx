@@ -19,10 +19,14 @@
                             ?>
                         </p>
                         <ul>
-                            <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                            <li><a href="#"><i class="lni-twitter-original"></i></a></li>
-                            <li><a href="#"><i class="lni-pinterest"></i></a></li>
-                            <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                            <?php 
+                                $footer_section_social = get_theme_mod('footer_section_social');
+                                foreach($footer_section_social as $fss){
+                                    ?>
+                                    <li><a href="<?php echo esc_url($fss['social_url']);?>"><i class="<?php echo esc_attr($fss['social_icon']); ?>"></i></a></li>
+                                    <?php
+                                }
+                            ?>
                         </ul>
                     </div> <!-- footer content -->
                 </div>
@@ -34,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copyright-text text-center pt-20">
-                        <p>Copyright © 2022.</p>
+                        <p>© <?php echo date('Y'); ?> - <a href="https://profiles.wordpress.org/monzuralam" target="_blank" class="text-white">Unfold</a> | All rights reserved.</p>
                     </div> <!-- copyright text -->
                 </div>
             </div> <!-- row -->

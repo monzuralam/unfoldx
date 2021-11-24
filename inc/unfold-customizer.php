@@ -909,7 +909,7 @@ Kirki::add_field( 'footer_panel', [
     'default'       =>  ''
 ]);
 
-// footer logo section
+// footer description section
 Kirki::add_section( 'footer_desc_section', [
     'title'         =>  esc_html__('Description','unfold'),
     'panel'         =>  'footer_panel'
@@ -922,4 +922,64 @@ Kirki::add_field( 'footer_panel', [
     'section'       =>  'footer_desc_section',
     'type'          =>  'textarea',
     'default'       =>  'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci- didunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe- rcitation ullamco laboris nisi ut aliquip ex ea commodo consequat'
+]);
+
+// footer social section
+Kirki::add_section( 'footer_social_section', [
+    'title'         =>  esc_html__('Social Media','unfold'),
+    'panel'         =>  'footer_panel'
+]);
+
+// Footer Social control
+Kirki::add_field( 'footer_panel', [
+    'label'         =>  esc_html__('Social Media', 'unfold'),
+    'settings'      =>  'footer_section_social',
+    'section'       =>  'footer_social_section',
+    'type'          =>  'repeater',
+    'default'       =>  [],
+    'row_label'     =>  [
+        'type'      =>  'field',
+        'value'     =>  esc_html__('Social','unfold'),
+        'field'     =>  'social_icon'
+    ],
+    'fields'        =>  [
+        'social_icon'          =>  [
+            'type'          =>  'select',
+            'label'         =>  esc_html__('Social icon', 'unfold'),
+            'description'   =>  esc_html__('select icon from dropdown list.', 'unfold'),
+            'default'       =>  '',
+            'placeholder'   =>  esc_html__('Select icon', 'unfold'),
+            'multiple'      =>  false,
+            'choices'       =>  [
+                ''                          =>  esc_html__( 'Select', 'unfold'),
+                'lni-facebook'              =>  esc_html__( 'Facebook', 'unfold'),
+                'lni-facebook-messenger'    =>  esc_html__( 'Facebook messenger', 'unfold'),
+                'lni-facebook-original'     =>  esc_html__( 'Facebook Original', 'unfold'),
+                'lni-facebook-filled'       =>  esc_html__( 'Facebook Filled', 'unfold'),
+                'lni-twitter'               =>  esc_html__( 'Twiiter', 'unfold'),
+                'lni-twitter-original'      =>  esc_html__( 'Twitter Original', 'unfold'),
+                'lni-twitter-filled'        =>  esc_html__( 'Twitter Filled', 'unfold'),
+                'lni-linkedin'              =>  esc_html__( 'Linkedin', 'unfold'),
+                'lni-linkedin-original'     =>  esc_html__( 'Linkedin Original', 'unfold'),
+                'lni-linkedin-filled'       =>  esc_html__( 'Linkedin Filled', 'unfold'),
+                'lni-git'                   =>  esc_html__( 'Git', 'unfold'),
+                'lni-github'                =>  esc_html__( 'Github', 'unfold'),
+                'lni-github-original'       =>  esc_html__( 'Github Original', 'unfold'),
+                'lni-stackoverflow'         =>  esc_html__( 'Stackoverflow', 'unfold'),
+                'lni-website'               =>  esc_html__( 'Website', 'unfold'),
+                'lni-youtube'               =>  esc_html__( 'Youtube', 'unfold'),
+                'lni-wechat'                =>  esc_html__( 'Wechat', 'unfold'),
+                'lni-whatsapp'              =>  esc_html__( 'Whatsapp', 'unfold'),
+                'lni-slack'                 =>  esc_html__( 'Slack', 'unfold'),
+                'lni-skype'                 =>  esc_html__( 'Skype', 'unfold'),
+                'lni-pinterest'             =>  esc_html__( 'Pinterest', 'unfold'),
+            ]
+        ],
+        'social_url' => [
+			'type'        => 'url',
+			'label'       => esc_html__( 'URL', 'unfold' ),
+			'description' => esc_html__( '', 'unfold' ),
+			'default'     => '',
+		]
+    ]
 ]);
