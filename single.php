@@ -1,12 +1,10 @@
 <?php
 /**
- * The template for displaying single posts and pages.
+ * The template for displaying single posts.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage unfold
- * @since unfold 1.0
+ * @package Unfold
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
