@@ -106,20 +106,6 @@ add_action('wp_enqueue_scripts','unfold_register_script');
 include_once ( get_theme_file_path('inc/unfold-customizer.php') );
 
 /**
- * Customizer Color
- */
-function unfold_customizer_color(){
-    ?>
-    <style>
-        .header-content-right .sub-title{
-            color: <?php echo get_theme_mod('hero_sub_title_color'); ?>;
-        }
-    </style>
-    <?php
-}
-add_action('wp_head','unfold_customizer_color');
-
-/**
  * Customizer JS
  */
 function unfold_customizer_live_preview(){
