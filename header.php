@@ -93,7 +93,7 @@
         </div> <!-- navigation -->
 
         <?php
-        if (is_front_page()) :
+        if (is_page_template('template-home.php')) :
         ?>
             <div id="parallax" class="header-content d-flex align-items-center">
                 <div class="header-shape shape-one layer" data-depth="0.10">
