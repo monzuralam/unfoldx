@@ -1766,3 +1766,14 @@ p.form-message.success, p.form-message.error {
   color: #754ef9 !important;
   border-color: #754ef9 !important;
 }
+
+/*-----------------------------------------------
+# Customize css
+/*---------------------------------------------*/
+.site-content{
+  margin: 200px 0;
+}
+
+.post-title{
+  margin: 20px 0;
+}
