@@ -175,6 +175,133 @@ Kirki::add_panel( 'unfold_panel', array(
     'priority'      =>  20
 ));
 
+// Hero Section
+Kirki::add_section( 'hero_section', [
+    'title'         =>  __('Hero Section', 'unfold' ),
+    'panel'         =>  'unfold_panel'
+]);
+
+// Hero Section intro Title
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __( 'Intro Title', 'unfold' ),
+    'settings'  =>  'hero_section_intro_title',
+    'section'   =>  'hero_section',
+    'type'      =>  'text',
+    'default'   =>  'Hello, I\'m',
+]);
+
+// Hero Section Title
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __( 'Name', 'unfold' ),
+    'settings'  =>  'hero_section_title',
+    'section'   =>  'hero_section',
+    'type'      =>  'text',
+    'default'   =>  'MARK PARKER',
+]);
+
+// Hero Section Sub Title
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __( 'Subtitle', 'unfold' ),
+    'settings'  =>  'hero_section_sub_title',
+    'section'   =>  'hero_section',
+    'type'      =>  'text',
+    'default'   =>  'A Freelance UI Designer & Web Developer',
+]);
+
+// Hero Section Button
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __( 'Button Text', 'unfold' ),
+    'settings'  =>  'hero_section_btn',
+    'section'   =>  'hero_section',
+    'type'      =>  'text',
+    'default'   =>  'Download',
+]);
+
+// Hero Section CV
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __( 'CV Attachment', 'unfold' ),
+    'settings'  =>  'hero_section_cv',
+    'section'   =>  'hero_section',
+    'type'      =>  'upload',
+    'default'   =>  '',
+]);
+
+// Hero Section Photo
+Kirki::add_field( 'unfold_config', [
+    'label'     =>  __( 'Photo', 'unfold' ),
+    'settings'  =>  'hero_section_photo',
+    'section'   =>  'hero_section',
+    'type'      =>  'image',
+    'default'   =>  get_theme_file_uri('assets/images/banner/hero.png')
+]);
+
+// Enable Hero social 
+Kirki::add_field( 'unfold_config', array(
+    'label'     =>  __('Enable Social Link ?','unfold'),
+    'settings'  =>  'hero_section_social_enable',
+    'section'   =>  'hero_section',
+    'type'      =>  'switch',
+    'default'   =>  'on',
+    'choices'   =>  [
+        'on'    =>  esc_html__('Yes', 'unfold'),
+        'off'   =>  esc_html__('No', 'unfold')
+    ]
+));
+
+// Hero Social control
+Kirki::add_field( 'footer_panel', [
+    'label'         =>  esc_html__('Social Media', 'unfold'),
+    'settings'      =>  'hero_section_social',
+    'section'       =>  'hero_section',
+    'type'          =>  'repeater',
+    'default'       =>  [],
+    'row_label'     =>  [
+        'type'      =>  'field',
+        'value'     =>  esc_html__('Social','unfold'),
+        'field'     =>  'social_icon'
+    ],
+    'fields'        =>  [
+        'social_icon'          =>  [
+            'type'          =>  'select',
+            'label'         =>  esc_html__('Social icon', 'unfold'),
+            'description'   =>  esc_html__('select icon from dropdown list.', 'unfold'),
+            'default'       =>  '',
+            'placeholder'   =>  esc_html__('Select icon', 'unfold'),
+            'multiple'      =>  false,
+            'choices'       =>  [
+                ''                          =>  esc_html__( 'Select', 'unfold'),
+                'lni-facebook'              =>  esc_html__( 'Facebook', 'unfold'),
+                'lni-facebook-messenger'    =>  esc_html__( 'Facebook messenger', 'unfold'),
+                'lni-facebook-original'     =>  esc_html__( 'Facebook Original', 'unfold'),
+                'lni-facebook-filled'       =>  esc_html__( 'Facebook Filled', 'unfold'),
+                'lni-twitter'               =>  esc_html__( 'Twiiter', 'unfold'),
+                'lni-twitter-original'      =>  esc_html__( 'Twitter Original', 'unfold'),
+                'lni-twitter-filled'        =>  esc_html__( 'Twitter Filled', 'unfold'),
+                'lni-linkedin'              =>  esc_html__( 'Linkedin', 'unfold'),
+                'lni-linkedin-original'     =>  esc_html__( 'Linkedin Original', 'unfold'),
+                'lni-linkedin-filled'       =>  esc_html__( 'Linkedin Filled', 'unfold'),
+                'lni-git'                   =>  esc_html__( 'Git', 'unfold'),
+                'lni-github'                =>  esc_html__( 'Github', 'unfold'),
+                'lni-github-original'       =>  esc_html__( 'Github Original', 'unfold'),
+                'lni-stackoverflow'         =>  esc_html__( 'Stackoverflow', 'unfold'),
+                'lni-website'               =>  esc_html__( 'Website', 'unfold'),
+                'lni-youtube'               =>  esc_html__( 'Youtube', 'unfold'),
+                'lni-wechat'                =>  esc_html__( 'Wechat', 'unfold'),
+                'lni-whatsapp'              =>  esc_html__( 'Whatsapp', 'unfold'),
+                'lni-slack'                 =>  esc_html__( 'Slack', 'unfold'),
+                'lni-skype'                 =>  esc_html__( 'Skype', 'unfold'),
+                'lni-pinterest'             =>  esc_html__( 'Pinterest', 'unfold'),
+            ]
+        ],
+        'social_url' => [
+			'type'        => 'url',
+			'label'       => esc_html__( 'URL', 'unfold' ),
+			'description' => esc_html__( '', 'unfold' ),
+			'default'     => '',
+		]
+    ]
+]);
+
 Kirki::add_section( 'about_section', array(
     'title'         =>  __( 'About Section', 'unfold' ),
     'panel'         =>  'unfold_panel'

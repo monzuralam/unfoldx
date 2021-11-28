@@ -130,21 +130,58 @@
                     <div class="row align-items-center">
                         <div class="col-xl-5 col-lg-6">
                             <div class="header-content-right">
-                                <h4 class="sub-title"><?php echo get_theme_mod('hero_sub_title'); ?></h4>
-                                <h1 class="title"><?php echo get_theme_mod('hero_title'); ?></h1>
-                                <p><?php echo get_theme_mod('hero_description'); ?></p>
-                                <a class="main-btn" href="<?php echo get_theme_mod('hero_button_url'); ?>"><?php echo get_theme_mod('hero_button_text'); ?></a>
+                                <h4 class="sub-title">
+                                    <?php
+                                        $hero_section_intro_title = get_theme_mod('hero_section_intro_title'); 
+                                        printf(
+                                            esc_html__('%1$s', 'unfold'),
+                                            $hero_section_intro_title
+                                        ); 
+                                    ?>
+                                </h4>
+                                <h1 class="title">
+                                    <?php 
+                                        $hero_section_title = get_theme_mod('hero_section_title');
+                                        printf(
+                                            esc_html__('%1$s', 'unfold'),
+                                            $hero_section_title
+                                        ); 
+                                    ?>
+                                </h1>
+                                <p>
+                                    <?php 
+                                        $hero_section_sub_title = get_theme_mod('hero_section_sub_title');
+                                        printf(
+                                            esc_html__('%1$s', 'unfold'),
+                                            $hero_section_sub_title
+                                        ); 
+                                    ?>
+                                </p>
+                                <a class="main-btn" href="<?php 
+                                    $hero_section_cv = get_theme_mod('hero_section_cv');
+                                    echo esc_url($hero_section_cv);?>">
+                                    <?php 
+                                    $hero_section_btn = get_theme_mod('hero_section_btn');
+                                    printf(
+                                        esc_html__('%1$s', 'unfold'),
+                                        $hero_section_btn
+                                    ); 
+                                    ?>
+                                </a>
                             </div> <!-- header content right -->
                         </div>
                         <div class="col-lg-6 offset-xl-1">
                             <div class="header-image d-none d-lg-block">
-                                <img src="<?php echo get_theme_mod('hero_img'); ?>" alt="hero">
+                                <img src="<?php
+                                    $hero_section_photo = get_theme_mod('hero_section_photo');
+                                    echo esc_url($hero_section_photo);
+                                ?>" alt="hero">
                             </div> <!-- header image -->
                         </div>
                     </div> <!-- row -->
                 </div> <!-- container -->
                 <?php
-                    $social_enable = get_theme_mod('social_icon');
+                    $social_enable = get_theme_mod('hero_section_social_enable');
                     if( $social_enable ){
                 ?>
                 <div class="header-social">
@@ -154,32 +191,11 @@
                                 <div class="header-social-icon">
                                     <ul>
                                         <?php
-                                            $fb = get_theme_mod('facebook_link');
-                                            if($fb){        
+                                            $hero_section_social = get_theme_mod('hero_section_social');
+                                            foreach($hero_section_social as $hss){     
                                         ?>
-                                        <li><a href="<?php echo esc_url($fb); ?>"><i class="lni-facebook-filled"></i></a></li>
+                                        <li><a href="<?php echo esc_url($hss['social_url']); ?>"><i class="<?php echo esc_attr($hss['social_icon']); ?>"></i></a></li>
                                         <?php 
-                                            }
-                                            
-                                            $tw = get_theme_mod('twitter_link');
-                                            if($tw){
-                                        ?>
-                                        <li><a href="<?php echo esc_url($tw); ?>"><i class="lni-twitter-original"></i></a></li>
-                                        <?php 
-                                            }
-
-                                            $be = get_theme_mod('behance_link');
-                                            if($be){
-                                        ?>
-                                        <li><a href="<?php echo esc_url($be); ?>"><i class="lni-behance-original"></i></a></li>
-                                        <?php
-                                            }
-
-                                            $li = get_theme_mod('linkedin_link');
-                                            if($li){
-                                        ?>
-                                        <li><a href="<?php echo esc_url($li); ?>"><i class="lni-linkedin-original"></i></a></li>
-                                        <?php
                                             }
                                         ?>
                                     </ul>
