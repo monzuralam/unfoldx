@@ -133,7 +133,6 @@ Kirki::add_field( 'footer_panel', [
         'social_url' => [
 			'type'        => 'url',
 			'label'       => esc_html__( 'URL', 'unfold' ),
-			'description' => esc_html__( '', 'unfold' ),
 			'default'     => '',
 		]
     ]
@@ -942,7 +941,6 @@ Kirki::add_field( 'footer_panel', [
         'social_url' => [
 			'type'        => 'url',
 			'label'       => esc_html__( 'URL', 'unfold' ),
-			'description' => esc_html__( '', 'unfold' ),
 			'default'     => '',
 		]
     ]
