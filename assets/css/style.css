@@ -945,19 +945,19 @@ p {
   display: inline-block;
   margin: 10px 15px 0; }
   .call-action-content ul li .main-btn {
-    width: 180px;
+    width: 180px !important;
     padding: 0; }
     .call-action-content ul li .main-btn.custom {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none;
       background-color: #fff;
-      color: #754ef9;
+      color: #754ef9 !important;
       border-color: #fff; }
       .call-action-content ul li .main-btn.custom:hover {
-        background-color: #754ef9;
-        color: #fff;
-        border-color: #754ef9; }
+        background-color: #754ef9 !important;
+        color: #fff !important;
+        border-color: #754ef9 !important; }
     .call-action-content ul li .main-btn.custom-2 {
       color: #fff;
       background-color: transparent;
@@ -1138,20 +1138,20 @@ p {
     padding-bottom: 40px; }
     .single-pricing .pricing-body .pricing-btn .main-btn {
       background-color: #fff;
-      color: #754ef9; }
+      color: #754ef9 !important; }
       .single-pricing .pricing-body .pricing-btn .main-btn:hover {
-        background-color: #754ef9;
-        color: #fff; }
+        background-color: #754ef9 !important;
+        color: #fff !important; }
 .single-pricing.active {
   -webkit-box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
   -moz-box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
   box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23); }
   .single-pricing.active .pricing-body .pricing-btn .main-btn {
     background-color: #754ef9;
-    color: #fff; }
+    color: #fff !important; }
     .single-pricing.active .pricing-body .pricing-btn .main-btn:hover {
-      background-color: #fff;
-      color: #754ef9; }
+      background-color: #fff !important;
+      color: #754ef9 !important; }
 
 /*===========================
        7.BLOG css 
