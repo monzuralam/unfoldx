@@ -12,10 +12,7 @@
                         <p class="mt-">
                             <?php 
                                 $footer_section_desc = get_theme_mod('footer_section_desc');
-                                printf(
-                                    __('%1$s','unfold'),
-                                    $footer_section_desc
-                                );
+                                echo esc_html($footer_section_desc);
                             ?>
                         </p>
                         <ul>
