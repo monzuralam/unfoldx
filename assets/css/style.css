@@ -1945,10 +1945,6 @@ p.form-message.success, p.form-message.error {
 	padding-top: 0;
 }
 
-.form-allowed-tags code {
-	font-family: Inconsolata, monospace;
-}
-
 .form-submit {
 	margin-bottom: 0;
 }
@@ -2011,4 +2007,14 @@ p.form-message.success, p.form-message.error {
   line-height: 1;
   padding: 0.84375em 0.875em 0.78125em;
   text-transform: uppercase;
+}
+
+/*-----------------------------------------------
+# Pagination css
+/*---------------------------------------------*/
+ul.pagination li a {
+  color: inherit;
+}
+.current {
+  color: #754ef9;
 }
