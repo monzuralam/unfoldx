@@ -132,40 +132,24 @@
                             <div class="header-content-right">
                                 <h4 class="sub-title">
                                     <?php
-                                        $hero_section_intro_title = get_theme_mod('hero_section_intro_title'); 
-                                        printf(
-                                            esc_html__('%1$s', 'unfold'),
-                                            $hero_section_intro_title
-                                        ); 
+                                        echo esc_html( get_theme_mod('hero_section_intro_title') );  
                                     ?>
                                 </h4>
                                 <h1 class="title">
                                     <?php 
-                                        $hero_section_title = get_theme_mod('hero_section_title');
-                                        printf(
-                                            esc_html__('%1$s', 'unfold'),
-                                            $hero_section_title
-                                        ); 
+                                        echo esc_html( get_theme_mod('hero_section_title') );
                                     ?>
                                 </h1>
                                 <p>
                                     <?php 
-                                        $hero_section_sub_title = get_theme_mod('hero_section_sub_title');
-                                        printf(
-                                            esc_html__('%1$s', 'unfold'),
-                                            $hero_section_sub_title
-                                        ); 
+                                        echo esc_html( get_theme_mod('hero_section_sub_title') );
                                     ?>
                                 </p>
                                 <a class="main-btn" href="<?php 
                                     $hero_section_cv = get_theme_mod('hero_section_cv');
                                     echo esc_url($hero_section_cv);?>">
                                     <?php 
-                                    $hero_section_btn = get_theme_mod('hero_section_btn');
-                                    printf(
-                                        esc_html__('%1$s', 'unfold'),
-                                        $hero_section_btn
-                                    ); 
+                                        echo esc_html( get_theme_mod('hero_section_btn') );
                                     ?>
                                 </a>
                             </div> <!-- header content right -->
