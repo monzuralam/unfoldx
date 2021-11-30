@@ -36,10 +36,10 @@ get_header();
                         <li>
                             <div class="single-info d-flex align-items-center">
                                 <div class="info-icon">
-                                    <i class="<?php echo $about_me_items['info_icon']; ?>"></i>
+                                    <i class="<?php echo esc_attr($about_me_items['info_icon']); ?>"></i>
                                 </div>
                                 <div class="info-text">
-                                    <p><span><?php echo $about_me_items['info_label']; ?></span> <?php echo $about_me_items['info_value']; ?></p>
+                                    <p><span><?php echo esc_html( $about_me_items['info_label'] ); ?></span> <?php echo esc_html( $about_me_items['info_value'] ); ?></p>
                                 </div>
                             </div> <!-- single info -->
                         </li>
@@ -57,17 +57,17 @@ get_header();
                     ?>
                     <div class="skill-item mt-25">
                         <div class="skill-header">
-                            <h6 class="skill-title"><?php echo $skill['skill_title']; ?></h6>
+                            <h6 class="skill-title"><?php echo esc_html( $skill['skill_title'] ); ?></h6>
                             <div class="skill-percentage">
                                 <div class="count-box counted">
-                                    <span class="counter"><?php echo $skill['skill_percentage']; ?></span>
+                                    <span class="counter"><?php echo esc_html( $skill['skill_percentage'] ); ?></span>
                                 </div>
                                 %
                             </div>
                         </div>
                         <div class="skill-bar">
                             <div class="bar-inner">
-                                <div class="bar progress-line" data-width="<?php echo $skill['skill_percentage']; ?>"></div>
+                                <div class="bar progress-line" data-width="<?php echo esc_attr( $skill['skill_percentage'] ); ?>"></div>
                             </div>
                         </div>
                     </div> <!-- skill item -->
@@ -106,11 +106,11 @@ get_header();
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="single-service text-center mt-30">
                     <div class="service-icon">
-                        <i class="<?php echo $serive_item['service_item_icon']; ?>"></i>
+                        <i class="<?php echo esc_attr( $serive_item['service_item_icon'] ); ?>"></i>
                     </div>
                     <div class="service-content">
-                        <h4 class="service-title"><a href="<?php echo $serive_item['service_item_link']; ?>"><?php echo $serive_item['service_item_title']; ?></a></h4>
-                        <p><?php echo $serive_item['service_item_desc']; ?></p>
+                        <h4 class="service-title"><a href="<?php echo esc_url( $serive_item['service_item_link'] ); ?>"><?php echo esc_html( $serive_item['service_item_title'] ); ?></a></h4>
+                        <p><?php echo esc_html( $serive_item['service_item_desc'] ); ?></p>
                     </div>
                 </div> <!-- single service -->
             </div>
@@ -134,17 +134,17 @@ get_header();
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-9">
                 <div class="call-action-content text-center">
-                    <h2 class="action-title"><?php echo esc_html__(get_theme_mod('cta_title')); ?></h2>
-                    <p><?php echo esc_html__( get_theme_mod('cta_description') ); ?></p>
+                    <h2 class="action-title"><?php echo esc_html(get_theme_mod('cta_title')); ?></h2>
+                    <p><?php echo esc_html( get_theme_mod('cta_description') ); ?></p>
                     <ul>
                         <li>
                             <a class="main-btn custom" href="<?php echo esc_url(get_theme_mod('cta_btn_1_link')); ?>">
-                                <?php echo esc_html__(get_theme_mod('cta_btn_1')); ?>
+                                <?php echo esc_html( get_theme_mod('cta_btn_1') ); ?>
                             </a>
                         </li>
                         <li>
                             <a class="main-btn custom-2" href="<?php echo esc_url(get_theme_mod('cta_btn_2_link')); ?>">
-                                <?php echo esc_html__(get_theme_mod('cta_btn_2')); ?>
+                                <?php echo esc_html( get_theme_mod('cta_btn_2') ); ?>
                             </a>
                         </li>
                     </ul>
@@ -232,14 +232,12 @@ get_header();
                 <div class="section-title text-center pb-25">
                     <h2 class="title">
                         <?php 
-                            $price_section_title = get_theme_mod('price_section_title');
-                            printf( __('%1$s', 'unfold'), $price_section_title );
+                            echo esc_html( get_theme_mod('price_section_title') );
                         ?>
                     </h2>
                     <p>
                         <?php
-                            $price_section_desc = get_theme_mod('price_section_desc');
-                            printf( __('%1$s', 'unfold'), $price_section_desc );
+                            echo esc_html( get_theme_mod('price_section_desc') );
                         ?>
                     </p>
                 </div> <!-- section title -->
@@ -300,20 +298,12 @@ get_header();
                 <div class="section-title text-center pb-25">
                     <h2 class="title">
                         <?php 
-                            $blog_section_title = get_theme_mod('blog_section_title');
-                            printf(
-                                __('%1$s', 'unfold'),
-                                $blog_section_title
-                            );
+                            echo esc_html( get_theme_mod('blog_section_title') );
                         ?>
                     </h2>
                     <p>
                         <?php 
-                            $blog_section_desc = get_theme_mod('blog_section_desc');
-                            printf(
-                                __('%1$s', 'unfold'),
-                                $blog_section_desc
-                            );
+                            echo esc_html( get_theme_mod('blog_section_desc') );
                         ?>
                     </p>
                 </div> <!-- section title -->
@@ -373,20 +363,12 @@ get_header();
                 <div class="section-title text-center pb-25">
                     <h2 class="title">
                         <?php 
-                            $contact_section_title = get_theme_mod('contact_section_title');
-                            printf( 
-                                __( '%1$s', 'unfold'), 
-                                $contact_section_title 
-                            ); 
+                            echo esc_html( get_theme_mod('contact_section_title') ); 
                         ?>
                     </h2>
                     <p>
                         <?php
-                            $contact_section_desc = get_theme_mod('contact_section_desc');
-                            printf(
-                                __( '%1$s', 'unfold'),
-                                $contact_section_desc
-                            );
+                            echo esc_html( get_theme_mod('contact_section_desc') );
                         ?>
                     </p>
                 </div> <!-- section title -->
@@ -402,11 +384,7 @@ get_header();
                         <h6 class="contact-title"><?php echo __('Address','unfold'); ?></h6>
                         <p>
                             <?php
-                                $address = get_theme_mod('contact_section_address');
-                                printf( 
-                                    __('%1$s','unfold'),
-                                    $address
-                                );
+                                echo esc_html( get_theme_mod('contact_section_address') );
                             ?>
                         </p>
                     </div>
@@ -457,11 +435,7 @@ get_header();
             <div class="col-lg-6">
                 <div class="contact-form pt-30">
                     <?php
-                        $cf_7 = do_shortcode(get_theme_mod('contact_form_7'));
-                        printf(
-                            __('%1$s', 'unfold'),
-                            $cf_7
-                        )
+                        echo do_shortcode( get_theme_mod('contact_form_7') );
                     ?>
                 </div> <!-- contact form -->
             </div>
