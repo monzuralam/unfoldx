@@ -32,11 +32,11 @@ get_header();
     </div> <!-- container -->
     <div class="container">
         <div class="row">
-            <div class="unfold-pagination">
+            <nav class="unfold-pagination pt-50">
                 <?php 
                     unfold_pagination();
                 ?>
-            </div>
+            </nav>
         </div>
     </div><!-- container -->
 </section>

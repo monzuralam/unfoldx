@@ -158,6 +158,11 @@ if( ! function_exists('unfold_pagination') ){
             'type'      =>  'list'
         ) );
         $links = str_replace("page-numbers","pagination",$links);
+        $links = str_replace("<li>","<li class=\"page-item\">",$links);
+        $links = str_replace("class=\"pagination\"","class=\"page-link\"",$links);
+        $links = str_replace("class=\"pagination current\"","class=\"page-link current\"",$links);
+        $links = str_replace("class=\"next pagination\"","class=\"next page-link\"",$links);
+        $links = str_replace("<a class=\"prev pagination\"","<a class=\"prev page-link\"",$links);
         echo $links;
     }
 }
