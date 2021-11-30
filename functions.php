@@ -144,3 +144,20 @@ if(!function_exists('unfold_menu_active_class')){
     }
     add_action('nav_menu_css_class','unfold_menu_active_class', 10, 2);
 }
+
+/**
+ * Pagination
+ */
+if( ! function_exists('unfold_pagination') ){
+    function unfold_pagination(){
+        global $wp_query;
+        $links = paginate_links( array(
+            'current'   =>  max( 1, get_query_var('paged')),
+            'total'     =>  $wp_query->max_num_pages,
+            'mid'       =>  '',
+            'type'      =>  'list'
+        ) );
+        $links = str_replace("page-numbers","pagination",$links);
+        echo $links;
+    }
+}
