@@ -1777,3 +1777,238 @@ p.form-message.success, p.form-message.error {
 .post-title{
   margin: 20px 0;
 }
+
+/*-----------------------------------------------
+# Comments css
+/*---------------------------------------------*/
+.comments-area {
+	margin: 3.5em 0 3.5em;
+}
+
+.comment-list + .comment-respond,
+.comment-navigation + .comment-respond {
+	padding-top: 1.75em;
+}
+
+.comments-title,
+.comment-reply-title {
+	border-top: 2px solid #1a1a1a;
+	font-size: 23px;
+	font-size: 1.4375rem;
+	font-weight: 700;
+	line-height: 1.3125;
+	padding-top: 1.217391304em;
+}
+
+.comments-title {
+	margin-bottom: 1.217391304em;
+}
+
+.comment-list {
+	list-style: none;
+	margin: 0;
+}
+
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback {
+	border-top: 1px solid #d1d1d1;
+	padding: 1.75em 0;
+}
+
+.comment-list .children {
+	list-style: none;
+	margin: 0;
+}
+
+.comment-list .children > li {
+	padding-left: 2em;
+}
+
+.comment-author {
+	color: #1a1a1a;
+	margin-bottom: 0.4375em;
+}
+
+.comment-author .avatar {
+	float: left;
+	height: 64px;
+	margin-right: 0.875em;
+	position: relative;
+	width: 64px;
+}
+
+.comment-metadata,
+.pingback .edit-link {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1.6153846154;
+}
+
+.comment-metadata {
+	margin-bottom: 2.1538461538em;
+}
+
+.comment-metadata a,
+.pingback .comment-edit-link {
+	color: #686868;
+}
+
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.pingback .comment-edit-link:hover,
+.pingback .comment-edit-link:focus {
+	color: #007acc;
+}
+
+.comment-metadata .edit-link,
+.pingback .edit-link {
+	display: inline-block;
+}
+
+.comment-metadata .edit-link:before,
+.pingback .edit-link:before {
+	content: "\002f";
+	display: inline-block;
+	opacity: 0.7;
+	padding: 0 0.538461538em;
+}
+
+.comment-content ul,
+.comment-content ol {
+	margin: 0 0 1.5em 1.25em;
+}
+
+.comment-content li > ul,
+.comment-content li > ol {
+	margin-bottom: 0;
+}
+
+.comment-reply-link {
+	border: 1px solid #d1d1d1;
+	border-radius: 2px;
+	color: #007acc;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+	margin-top: 2.1538461538em;
+	padding: 0.5384615385em 0.5384615385em 0.4615384615em;
+}
+
+.comment-reply-link:hover,
+.comment-reply-link:focus {
+	border-color: currentColor;
+	color: #007acc;
+	outline: 0;
+}
+
+.comment-form {
+	padding-top: 1.75em;
+}
+
+.comment-form label {
+	color: #686868;
+	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	letter-spacing: 0.076923077em;
+	line-height: 1.6153846154;
+	margin-bottom: 0.5384615385em;
+	text-transform: uppercase;
+}
+
+.comment-list .comment-form {
+	padding-bottom: 1.75em;
+}
+
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.form-allowed-tags {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1.6153846154;
+	margin-bottom: 2.1538461538em;
+}
+
+.no-comments {
+	border-top: 1px solid #d1d1d1;
+	font-weight: 700;
+	margin: 0;
+	padding-top: 1.75em;
+}
+
+.comment-navigation + .no-comments {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.form-allowed-tags code {
+	font-family: Inconsolata, monospace;
+}
+
+.form-submit {
+	margin-bottom: 0;
+}
+
+.required {
+	color: #007acc;
+}
+
+.comment-reply-title small {
+	font-size: 100%;
+}
+
+.comment-reply-title small a {
+	border: 0;
+	float: right;
+	height: 32px;
+	overflow: hidden;
+	width: 26px;
+}
+
+.comment-reply-title small a:hover,
+.comment-reply-title small a:focus {
+	color: #1a1a1a;
+}
+
+.comment-reply-title small a:before {
+	content: "\f405";
+	font-size: 32px;
+	position: relative;
+	top: -5px;
+}
+
+.comment-form #wp-comment-cookies-consent {
+	margin: 0 10px 0 0;
+}
+
+.comment-form .comment-form-cookies-consent label {
+	display: inline;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.comment-form input[type="text"], .comment-form input[type="email"], .comment-form input[type="number"], .comment-form input[type="url"], .comment-form textarea {
+  background: #fff;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  color: #686868;
+  padding: 0.625em 0.4375em;
+  width: 100%;
+}
+
+.comment-form input[type="submit"], .comment-form input[type="submit"][disabled]:hover, .comment-form input[type="submit"][disabled]:focus {
+  background: #000;
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.046875em;
+  line-height: 1;
+  padding: 0.84375em 0.875em 0.78125em;
+  text-transform: uppercase;
+}
