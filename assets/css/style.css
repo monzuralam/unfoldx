@@ -2018,3 +2018,30 @@ ul.pagination li a {
 .current {
   color: #754ef9;
 }
+
+/*-----------------------------------------------
+# Menu css
+* ---------------------------------------------*/
+ul.dropdown-menu {
+  top: 70px;
+}
+
+ul.dropdown-menu li {
+  margin: 0px !important;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+ul.dropdown-menu li:last-child {
+  border-bottom: 0px solid rgba(0,0,0,.15);
+}
+
+ul.dropdown-menu li a {
+  padding: 5px;
+  width: 100%;
+  font-size:14px !important;
+  display: block;
+}
+
+ul.dropdown-menu>.nav-item a::before{
+  display: none;
+}

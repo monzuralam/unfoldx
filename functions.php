@@ -166,3 +166,22 @@ if( ! function_exists('unfold_pagination') ){
         echo $links;
     }
 }
+
+/**
+ * Menu Class fix
+ */
+if( ! function_exists('unfold_menu_style_fix') ){
+    function unfold_menu_style_fix( $classes ){
+        $classes[] = 'dropdown-menu';
+        return $classes;
+    }
+    add_filter('nav_menu_submenu_css_class', 'unfold_menu_style_fix');
+}
+
+if( ! function_exists('unfold_menu_style_replace') ){
+    function unfold_menu_style_replace( $menu ){
+        $menu = preg_replace('/menu-item-has-children/','menu-item-has-children dropdown',$menu); 
+        return $menu;
+    }
+    add_filter('wp_nav_menu','unfold_menu_style_replace');
+}

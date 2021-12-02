@@ -123,7 +123,8 @@
 
     
     //===== 
-    
+    $("li.menu-item ").parent().closest("li").find(">a").attr("data-toggle","dropdown");
+
     
     
     
