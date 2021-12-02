@@ -1,6 +1,6 @@
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
+(function($) {
 
     $('a.page-scroll[href*="#"]:not([href="#"])').on('click', function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -15,5 +15,5 @@ $(function() {
         }
     });
 
-});
+}(jQuery));
 
