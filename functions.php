@@ -64,6 +64,10 @@ function unfold_theme_setup(){
     register_nav_menus(array(
         'primary_menu'  =>  __('Primary Menu','unfold'),
     ));    
+    
+    // load textdomain
+    load_theme_textdomain( 'unfold', get_theme_file_path() . '/languages' );
+    
 }
 add_action('after_setup_theme','unfold_theme_setup');
 
