@@ -67,6 +67,12 @@ function unfold_theme_setup(){
     
     // load textdomain
     load_theme_textdomain( 'unfold', get_theme_file_path() . '/languages' );
+
+    // Align
+    add_theme_support( "align-wide" );
+
+    // block style
+    add_theme_support( "wp-block-styles" );
 }
 add_action('after_setup_theme','unfold_theme_setup');
 
