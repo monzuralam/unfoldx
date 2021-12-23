@@ -6,7 +6,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="footer-content text-center">
-                        <a href="<?php echo home_url(); ?>">
+                        <a href="<?php echo esc_url(home_url()); ?>">
                             <?php if( !empty(get_theme_mod('footer_section_logo')) ): ?>
                             <img src="<?php echo esc_url(get_theme_mod('footer_section_logo')); ?>" alt="<?php echo esc_url(home_url()); ?>">
                             <?php else: ?>
