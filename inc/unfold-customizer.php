@@ -1,5 +1,5 @@
 <?php
-
+if( class_exists('Kirki') ):
 // Kirki
 Kirki::add_config( 'unfold_config', array(
     'capability'    =>  'edit_theme_options',
@@ -945,3 +945,4 @@ Kirki::add_field( 'footer_panel', [
 		]
     ]
 ]);
+endif;
