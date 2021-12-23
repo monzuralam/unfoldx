@@ -67,7 +67,6 @@ function unfold_theme_setup(){
     
     // load textdomain
     load_theme_textdomain( 'unfold', get_theme_file_path() . '/languages' );
-    
 }
 add_action('after_setup_theme','unfold_theme_setup');
 
@@ -188,4 +187,24 @@ if( ! function_exists('unfold_menu_style_replace') ){
         return $menu;
     }
     add_filter('wp_nav_menu','unfold_menu_style_replace');
+}
+
+if( ! function_exists('unfold_sidebar_registration') ){
+    function unfold_sidebar_registration() {
+
+        // Sidebar #1.
+        register_sidebar(
+            array(
+                'name'        => __( 'Sidebar', 'unfold' ),
+                'id'          => 'sidebar-1',
+                'description' => __( 'Widgets in this area will be displayed in the sidebar.', 'unfold' ),
+                'before_title'  => '<h2 class="widget-title subheading heading-size-3">',
+                'after_title'   => '</h2>',
+                'before_widget' => '<div class="widget %2$s"><div class="widget-content">',
+                'after_widget'  => '</div></div>',
+            )
+        );
+    
+    }
+    add_action( 'widgets_init', 'unfold_sidebar_registration' );
 }

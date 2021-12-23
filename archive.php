@@ -14,12 +14,14 @@ get_header();
     </div>
     <div class="container">
         <div class="row">
+            <div class="col-md-8">
+                <div class="row">
             <?php
                 if( have_posts()){
                     while( have_posts() ){
                         the_post();
                         ?>
-                        <div class="col-lg-4 col-md-8 col-sm-9">
+                        <div class="col-md-6">
                             <div id="post-<?php the_ID(); ?>" <?php post_class('single-blog mt-30'); ?>>
                                 <div class="blog-image">
                                     <?php
@@ -37,7 +39,16 @@ get_header();
                         <?php
                     }
                 }
-            ?>
+            ?> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <?php
+                    if(is_active_sidebar('sidebar-1')){
+                        dynamic_sidebar('sidebar-1');
+                    }
+                ?>
+            </div>
         </div> <!-- row -->
     </div> <!-- container -->
     <div class="container">
@@ -51,6 +62,5 @@ get_header();
     </div><!-- container -->
 </section>
 <?php
-dynamic_sidebar('sidebar-1');
 get_footer();
 ?>
