@@ -20,7 +20,7 @@ get_header();
                                 </div>
                                 <div class="blog-content">
                                     <h4 class="blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                                    <span><?php echo date("F j, Y"); ?></span>
+                                    <span><?php echo esc_html(date("F j, Y"),'unfoldx'); ?></span>
                                 </div>
                             </div> <!-- single blog -->
                         </div>

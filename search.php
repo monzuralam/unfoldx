@@ -6,7 +6,7 @@ get_header();
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1><?php _e("No result found",'unfold'); ?></h1>
+                        <h1><?php esc_html__("No result found",'unfoldx'); ?></h1>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@ get_header();
             <div class="row">
                 <h1>
                     <?php
-				        printf( __( 'Search Results for: %s', 'unfold' ), '<span>' . esc_html( get_search_query() ) . '</span>' );
+				        printf( __( 'Search Results for: %s', 'unfoldx' ), '<span>' . esc_html( get_search_query() ) . '</span>' );
 				    ?>
                 </h1>
             </div>
@@ -42,7 +42,7 @@ get_header();
                 <div id="post-<?php the_ID(); ?>" <?php post_class('single-blog mt-30'); ?>>
                     <div class="p-4">
                         <h2 class="blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                        <span><?php echo date("F j, Y"); ?></span>
+                        <span><?php echo esc_html(date("F j, Y")); ?></span>
                         <p><?php the_excerpt(); ?></p>
                     </div>
                 </div> <!-- single blog -->

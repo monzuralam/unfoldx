@@ -62,11 +62,11 @@ function unfold_theme_setup(){
 
     // register menu
     register_nav_menus(array(
-        'primary_menu'  =>  __('Primary Menu','unfold'),
+        'primary_menu'  =>  __('Primary Menu','unfoldx'),
     ));    
     
     // load textdomain
-    load_theme_textdomain( 'unfold', get_theme_file_path() . '/languages' );
+    load_theme_textdomain( 'unfoldx', get_theme_file_path() . '/languages' );
 
     // Align
     add_theme_support( "align-wide" );
@@ -172,7 +172,7 @@ if( ! function_exists('unfold_pagination') ){
         $links = str_replace("class=\"pagination current\"","class=\"page-link current\"",$links);
         $links = str_replace("class=\"next pagination\"","class=\"next page-link\"",$links);
         $links = str_replace("<a class=\"prev pagination\"","<a class=\"prev page-link\"",$links);
-        echo $links;
+        echo esc_html($links);
     }
 }
 
@@ -201,9 +201,9 @@ if( ! function_exists('unfold_sidebar_registration') ){
         // Sidebar #1.
         register_sidebar(
             array(
-                'name'        => __( 'Sidebar', 'unfold' ),
+                'name'        => __( 'Sidebar', 'unfoldx' ),
                 'id'          => 'sidebar-1',
-                'description' => __( 'Widgets in this area will be displayed in the sidebar.', 'unfold' ),
+                'description' => __( 'Widgets in this area will be displayed in the sidebar.', 'unfoldx' ),
                 'before_title'  => '<h2 class="widget-title subheading heading-size-3">',
                 'after_title'   => '</h2>',
                 'before_widget' => '<div class="widget %2$s"><div class="widget-content">',

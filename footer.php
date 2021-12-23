@@ -10,7 +10,7 @@
                             <?php if( !empty(get_theme_mod('footer_section_logo')) ): ?>
                             <img src="<?php echo esc_url(get_theme_mod('footer_section_logo')); ?>" alt="<?php echo esc_url(home_url()); ?>">
                             <?php else: ?>
-                                <?php echo get_bloginfo( 'name' ); ?>
+                                <?php echo esc_html(get_bloginfo( 'name' )); ?>
                             <?php endif; ?>
                         </a>
                         <p class="mt-">
@@ -19,7 +19,7 @@
                                 if( !empty($footer_section_desc) ){
                                     echo esc_html($footer_section_desc);
                                 }else{
-                                    echo get_bloginfo( 'description' );
+                                    echo esc_html(get_bloginfo( 'description'));
                                 }
                                 
                             ?>
@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copyright-text text-center pt-20">
-                        <p>© <?php echo date('Y'); ?> - <a href="https://profiles.wordpress.org/monzuralam" target="_blank" class="text-white">Unfold</a> | All rights reserved.</p>
+                        <p>© <?php echo esc_html(date('Y')); ?> - <a href="https://profiles.wordpress.org/monzuralam" target="_blank" class="text-white"><?php esc_html__('UnfoldX','unfoldx') ?></a> <?php echo esc_html_e('| All rights reserved.', 'unfoldx') ?></p>
                     </div> <!-- copyright text -->
                 </div>
             </div> <!-- row -->

@@ -53,11 +53,11 @@
                                 <?php
                                     if( has_custom_logo() ){
                                 ?>
-                                <img src="<?php echo esc_url( $logo[0] ) ?>" alt="<?php echo get_bloginfo('name');  ?>">
+                                <img src="<?php echo esc_url( $logo[0] ) ?>" alt="<?php echo esc_attr(get_bloginfo('name'));  ?>">
                                 <?php
                                     }else{
                                 ?>
-                                    <span><?php echo get_bloginfo('name'); ?></span>
+                                    <span><?php echo esc_html(get_bloginfo('name')); ?></span>
                                 <?php
                                     }
                                 ?>

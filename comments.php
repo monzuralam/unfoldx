@@ -25,7 +25,7 @@ if (post_password_required()) {
 			$comments_number = get_comments_number();
 			if ('1' === $comments_number) {
 				/* translators: %s: Post title. */
-				printf(_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'unfold'), get_the_title());
+				printf(_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'unfoldx'), get_the_title());
 			} else {
 				printf(
 					/* translators: 1: Number of comments, 2: Post title. */
@@ -34,7 +34,7 @@ if (post_password_required()) {
 						'%1$s thoughts on &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
-						'unfold'
+						'unfoldx'
 					),
 					number_format_i18n($comments_number),
 					get_the_title()
@@ -66,7 +66,7 @@ if (post_password_required()) {
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
 	?>
-		<p class="no-comments"><?php _e('Comments are closed.', 'unfold'); ?></p>
+		<p class="no-comments"><?php _e('Comments are closed.', 'unfoldx'); ?></p>
 	<?php endif; ?>
 
 	<?php

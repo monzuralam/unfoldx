@@ -180,7 +180,7 @@ get_header();
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-work text-center mt-30">
                     <div class="work-image">
-                        <img src="<?php echo wp_get_attachment_image_src( $work_section_item['work_img'], null, false)[0];?>" alt="work">
+                        <img src="<?php echo esc_url(wp_get_attachment_image_src( $work_section_item['work_img'], null, false)[0]);?>" alt="work">
                     </div>
                     <div class="work-overlay">
                         <div class="work-content">
@@ -329,7 +329,7 @@ get_header();
                                 </div>
                                 <div class="blog-content">
                                     <h4 class="blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                                    <span><?php echo date("F j, Y"); ?></span>
+                                    <span><?php echo esc_html(date("F j, Y")); ?></span>
                                 </div>
                             </div> <!-- single blog -->
                         </div>
@@ -381,7 +381,7 @@ get_header();
                         <i class="lni-map-marker"></i>
                     </div>
                     <div class="contact-content">
-                        <h6 class="contact-title"><?php echo __('Address','unfold'); ?></h6>
+                        <h6 class="contact-title"><?php echo esc_html__('Address','unfoldx'); ?></h6>
                         <p>
                             <?php
                                 echo esc_html( get_theme_mod('contact_section_address') );
@@ -396,7 +396,7 @@ get_header();
                         <i class="lni-phone"></i>
                     </div>
                     <div class="contact-content">
-                        <h6 class="contact-title"><?php echo __('Phone','unfold'); ?></h6>
+                        <h6 class="contact-title"><?php echo esc_html__('Phone','unfoldx'); ?></h6>
                         <p>
                             <a href="tel:<?php echo esc_attr(get_theme_mod('contact_section_phone')) ?>">
                                 <?php echo esc_html(get_theme_mod('contact_section_phone')); ?>
@@ -416,7 +416,7 @@ get_header();
                         <i class="lni-envelope"></i>
                     </div>
                     <div class="contact-content">
-                        <h6 class="contact-title"><?php echo __('Email','unfold'); ?></h6>
+                        <h6 class="contact-title"><?php echo esc_html__('Email','unfoldx'); ?></h6>
                         <p>
                             <a href="mailto:<?php echo esc_attr(get_theme_mod('contact_section_email_1')) ?>">
                                 <?php echo esc_html(get_theme_mod('contact_section_email_1')); ?>

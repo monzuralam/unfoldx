@@ -42,7 +42,7 @@ get_header();
                                         <?php 
                                             wp_link_pages(
                                                 array(
-                                                    'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'unfold' ) . '"><span class="label">' . __( 'Pages:', 'unfold' ) . '</span>',
+                                                    'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'unfoldx' ) . '"><span class="label">' . __( 'Pages:', 'unfoldx' ) . '</span>',
                                                     'after'       => '</nav>',
                                                     'link_before' => '<span class="page-number">',
                                                     'link_after'  => '</span>',
