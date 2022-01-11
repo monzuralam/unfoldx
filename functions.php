@@ -115,6 +115,11 @@ add_action('wp_enqueue_scripts','unfold_register_script');
 include_once ( get_theme_file_path('inc/unfold-customizer.php') );
 
 /**
+ * Nav Walker
+ */
+include_once ( get_theme_file_path('inc/class-wp-bootstrap-navwalker.php') );
+
+/**
  * Customizer JS
  */
 function unfold_customizer_live_preview(){
@@ -126,33 +131,6 @@ add_action('customize_preview_init','unfold_customizer_live_preview');
  * TGM
  */
 require_once( get_theme_file_path('inc/tgm.php') );
-
-/**
- * Nav menu li custom class
- */
-if(!function_exists('unfold_nav_class')){
-    function unfold_nav_class( $classes, $item, $args){
-        if( 'primary_menu' === $args->theme_location){
-            $classes[] = "nav-item";
-        }
-
-        return $classes;
-    }
-    add_action('nav_menu_css_class','unfold_nav_class',10,3);
-}
-
-/**
- * Nav menu active class
- */
-if(!function_exists('unfold_menu_active_class')){
-    function unfold_menu_active_class( $classes, $item){
-        if( in_array('current-menu-item', $classes)){
-            $classes[]  = 'active';
-        }
-        return $classes;
-    }
-    add_action('nav_menu_css_class','unfold_menu_active_class', 10, 2);
-}
 
 /**
  * Pagination
@@ -172,27 +150,8 @@ if( ! function_exists('unfold_pagination') ){
         $links = str_replace("class=\"pagination current\"","class=\"page-link current\"",$links);
         $links = str_replace("class=\"next pagination\"","class=\"next page-link\"",$links);
         $links = str_replace("<a class=\"prev pagination\"","<a class=\"prev page-link\"",$links);
-        echo esc_html($links);
+        echo wp_kses_post( $links );
     }
-}
-
-/**
- * Menu Class fix
- */
-if( ! function_exists('unfold_menu_style_fix') ){
-    function unfold_menu_style_fix( $classes ){
-        $classes[] = 'dropdown-menu';
-        return $classes;
-    }
-    add_filter('nav_menu_submenu_css_class', 'unfold_menu_style_fix');
-}
-
-if( ! function_exists('unfold_menu_style_replace') ){
-    function unfold_menu_style_replace( $menu ){
-        $menu = preg_replace('/menu-item-has-children/','menu-item-has-children dropdown',$menu); 
-        return $menu;
-    }
-    add_filter('wp_nav_menu','unfold_menu_style_replace');
 }
 
 if( ! function_exists('unfold_sidebar_registration') ){
