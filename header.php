@@ -40,7 +40,7 @@
     <!--====== HEADER PART START ======-->
 
     <header id="home" class="header-area">
-        <div class="navigation fixed-top">
+        <div class="navigation">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -72,16 +72,16 @@
                                 <?php
                                     wp_nav_menu(array(
                                         'menu'      =>  '',
-                                        'container' =>  '',
-                                        'container_class'   =>  '',
+                                        'container' =>  'div',
+                                        'container_class'   =>  'collapse navbar-collapse',
                                         'container_id'      =>  '',
                                         'menu_class'        =>  'navbar-nav ml-auto',
                                         'menu_id'           =>  '',
-                                        'fallback_cb'       =>  '',
+                                        'fallback_cb'       =>  'WP_Bootstrap_Navwalker::fallback',
                                         'before'            =>  '',
                                         'after'            =>  '',
                                         'depth'            =>   3,
-                                        'walker'           =>   '',
+                                        'walker'           =>   new WP_Bootstrap_Navwalker(),
                                         'theme_location'    =>  'primary_menu'
                                     ));
                                 ?>
